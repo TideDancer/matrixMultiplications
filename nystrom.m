@@ -2,7 +2,12 @@
 k = log2(n);
 
 % ------------- multiplication routing -------------
-
+T = zeros(n);
+for i = 1:n
+  T(i) = dot(A(i,:), A(i,:)) * dot(B(:,i), B(:,i));
+end
+[values, iks] = sort(T, 'descend');
+J = iks(1:k);
 
 
 
