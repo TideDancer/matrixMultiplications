@@ -1,23 +1,23 @@
-N = 2048;
-b = log2(N);
+n = 2048;
+b = log2(n);
 d = 20;
-A = randn(N,N); B = randn(N,N);
+A = randn(n,n); B = randn(n,n);
 
 % --------------------- compressed product --------------
 s1_t = []; s2_t = []; h1_t = []; h2_t = []; p_t = [];
 for t = 1:d
-    s1 = sign(randn(1,N));
-    s2 = sign(randn(1,N));
-    h1 = ceil(rand(1,N).*b);
-    h2 = ceil(rand(1,N).*b);
+    s1 = sign(randn(1,n));
+    s2 = sign(randn(1,n));
+    h1 = ceil(rand(1,n).*b);
+    h2 = ceil(rand(1,n).*b);
     p = zeros(1,b);
     
-    for k = 1:N
+    for k = 1:n
         pa = zeros(1,b); pb = zeros(1,b);
-        for i = 1:N
+        for i = 1:n
             pa(h1(i)) = pa(h1(i))+s1(i)*A(i,k);
         end
-        for j = 1:N
+        for j = 1:n
             pb(h2(j)) = pb(h2(j))+s2(j)*B(j,k);
         end
         pa = fft(pa); pb = fft(pb);
@@ -38,9 +38,9 @@ for t = 1:d
 end
 
 % ------------------- decompress (i,j) ------------------
-C_approx = zeros(N,N);
-for i = 1:N
-    for j = 1:N
+C_approx = zeros(n,n);
+for i = 1:n
+    for j = 1:n
         for t = 1:d
             X(t) = s1_t(t,i)*s2_t(t,j)* p_t(t, 1+mod((h1_t(t,i)+h2_t(t,j)), b));
         end
