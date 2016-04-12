@@ -1,4 +1,4 @@
-N = 1024;
+N = 2048;
 b = log2(N);
 d = 20;
 A = randn(N,N); B = randn(N,N);
@@ -42,13 +42,16 @@ C_approx = zeros(N,N);
 for i = 1:N
     for j = 1:N
         for t = 1:d
-            X(t) = s1_t(t,i)*s2_t(t,j)*p_t(t,i)*mod(h1_t(t,i)+h2_t(t,j), b);
+            X(t) = s1_t(t,i)*s2_t(t,j)* p_t(t, 1+mod((h1_t(t,i)+h2_t(t,j)), b));
         end
         C_approx(i,j) = mean(X);
     end
 end
 
 % ------------------- compare --------------------------
-C = A*B
+C = A*B;
 error = C - C_approx;
-fnorm = sum(error);
+A_norm = norm(A, 'fro');
+B_nomr = norm(B, 'fro');
+C_norm = norm(C, 'fro');
+error_norm = norm(error, 'fro');
