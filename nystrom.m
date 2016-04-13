@@ -1,4 +1,11 @@
 % input A m*n, B n*p
+m = 1024;
+n = 1024;
+p = 1024;
+
+% dense matrix following normal distribution
+A = randn(m,n);
+B = randn(n,p);
 k = log2(n);
 
 % ------------- multiplication routing -------------
