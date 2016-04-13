@@ -1,26 +1,49 @@
+% very problematic !!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
 % input A n*n, B n*n, A,B are non-negative matrix
-n = 1024;
+n = 256;
 A = rand(n,n);
 B = rand(n,n);
 b = log2(n);
 
 % ------------- compute summary -------------
-S = [];
+S = zeros(b,3);
 for i = 1:n
   R = A(:,i)*B(i,:);
-  [w tmp] = findMax(R, b+1, b+1);
+  tmp = findByRank(R, b+1, b+1);
+  w = tmp(1,1);
   
-  [L_weight, L_position] = findMax(R, 1, b);
-  L_weight = L_weight - w;
+  L = findByRank(R, 1, b);
+  L(:,1) = L(:,1) - w;
   
-  for j = 1:len(S_weight)
-    if ismember(S_weight(j), L_weight)
-      S_weight(j) = S_weight(j) + S_weight(j);
+  % for each entry e occuring in both S and L, double e's weight in S and remove e from L
+  % get S union L
+  SIL = intersect(S, L, 'rows');
+  S_left = setdiff(S, SIL, 'rows');
+  L_left = setdiff(L, SIL, 'rows');
+  SIL(:,1) = 2.*SIL(:,1);
+  SUL = flipud(union(union(S_left, L_left, 'rows'), SIL, 'rows', 'sorted'));
+  
+  [r,c] = size(SUL);
+  if r > b
+  	w = SUL(b+1, 1);
+  else
+    w = 0;
+  end
+  S = SUL(1:b,:);
+  S(:,1) = S(:,1) - w;
+end
+ 
+% --------------- get approx value for each entry -----------
+C_approx = zeros(n,n);
+for i = 1:n
+  for j = 1:n
+    [lia, loc] = ismember([i j], S(:, 2:3), 'rows');
+    if lia == 1
+      C_approx(i,j) = S(loc, 1);
     end
   end
-  
-  
-    
+end
 
 
 

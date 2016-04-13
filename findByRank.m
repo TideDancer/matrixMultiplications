@@ -1,9 +1,10 @@
-% find values of rankStart to rankEnd in a 2-D matrix, and return them as a list
-% value is the array of those ranked values
-% position is the matrix of corresponding locations (i,j) in each row
+% find values of rankStart to rankEnd in a 2-D matrix, and return them as a table
+% the first column is the array of those ranked values
+% the next two columns are the corresponding locations (i,j) 
 
-function [value, position] = findByRank(M, rankStart, rankEnd);
+function table = findByRank(M, rankStart, rankEnd);
 
+table = [];
 value = [];
 position = [];
 
@@ -22,8 +23,7 @@ end
 for i = rankStart:rankEnd
   [maxv idx] = max(M(:));
   [x y] = ind2sub(size(M), idx);  
-  value = [value; maxv];
-  position = [position; x y];
+  table = [table; maxv x y];
   M(x,y) = minv;
 end
 
