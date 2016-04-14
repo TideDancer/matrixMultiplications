@@ -1,18 +1,18 @@
-% support several types of sampling
+% support several type of sampling
 % parameterList define parameters
 % if no parameters, set this argument to be [] then default parameters will be set
 % pdf return probability density of each elements
 % cdf return cummulative density
 
-function [pdf, cdf] = sample(A, B, types, parameterList);
+function [pdf, cdf] = sample(A, B, type, parameterList);
 
 [ra, ca] = size(A);
 [rb, cb] = size(B);
 
-% if type == 'column2norm', return p(i) = beta * A_k_column_2norm * B_k_row_2norm / sum_j(A_j_column_2norm * B_j_row_2norm)
+% type == 'column2norm', return p(i) = beta * A_k_column_2norm * B_k_row_2norm / sum_j(A_j_column_2norm * B_j_row_2norm)
 % beta = parameterList
 % don't put parameterList to be more than one value, don't put parameterList <= 0
-if types == 'column2norm'
+if strcmp(type, 'column2norm')
   beta = parameterList;
   p = zeros(1, ca);
   p_sum = 0;
@@ -25,6 +25,33 @@ if types == 'column2norm'
   end
   for i = 1:ca
     p(i) = p(i)/p_sum;
+  end
+end
+
+
+% type == 'elementSquare', return elementwise sampling probability p(i,j), but in a list format
+% finally in the list p((i-1)*c+j) = p_i,j 
+% based on drines paper
+% only accept one matrix A and compute p corresponding to A, thus B can be anything
+% parameter list is [n, l], where n is inner dimension
+if strcmp(type, 'elementSquare')
+  if length(parameterList) ~= 2
+    disp('put [n, l] as parameterList');
+    return;
+  end
+  n = parameterList(1); l = parameterList(2);
+  [r,c] = size(A);
+  p = zeros(1,r*c);
+  A_F = norm(A, 'fro');
+  A_F2 = A_F^2;
+  for i = 1:r
+    for j = 1:c
+      if abs(A(i,j)) > A_F log2(2*n)^3
+        p((i-1)*c+j) = min(1, l * A(i,j)^2 / A_F2);
+      else
+        p((i-1)*c+j) = min(1, sqrt(l) * abs(A(i,j)) * log2(2*n)^3 / (sqrt(2*n) * A_F) ); 
+      end
+    end
   end
 end
 
