@@ -51,6 +51,8 @@ end
 C = A*B;
 error = C - C_approx;
 A_norm = norm(A, 'fro');
-B_nomr = norm(B, 'fro');
+B_norm = norm(B, 'fro');
 C_norm = norm(C, 'fro');
+AB_norm = A_norm * B_norm;
+
 error_norm = norm(error, 'fro');
