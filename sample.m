@@ -21,7 +21,7 @@ if strcmp(type, 'column2norm')
   end 
   for i = 1:ca
     p(i) = norm(A(:,i)) * norm(B(i,:)) * beta;
-    p_sum = p_sum + p(i);
+    p_sum = p_sum + p(i)/beta;
   end
   for i = 1:ca
     p(i) = p(i)/p_sum;
@@ -30,7 +30,7 @@ end
 
 
 % type == 'elementSquare', return elementwise sampling probability p(i,j), but in a list format
-% finally in the list p((i-1)*c+j) = p_i,j 
+% finally in the list p(i,j) = p((i-1)*c+j) 
 % based on drines paper
 % only accept one matrix A and compute p corresponding to A, thus B can be anything
 % parameter list is [n, l], where n is inner dimension
@@ -40,12 +40,11 @@ if strcmp(type, 'elementSquare')
     return;
   end
   n = parameterList(1); l = parameterList(2);
-  [r,c] = size(A);
-  p = zeros(1,r*c);
+  p = zeros(1,ra*ca);
   A_F = norm(A, 'fro');
   A_F2 = A_F^2;
-  for i = 1:r
-    for j = 1:c
+  for i = 1:ra
+    for j = 1:ca
       if abs(A(i,j)) > A_F log2(2*n)^3
         p((i-1)*c+j) = min(1, l * A(i,j)^2 / A_F2);
       else
@@ -54,6 +53,45 @@ if strcmp(type, 'elementSquare')
     end
   end
 end
+
+
+% type = 'column2nomrSquareFro', return p(i) = beta * A_k_column_2norm^2 / A_frob^2
+% beta = parameterList
+% don't put parameterList to be more than one value, don't put parameterList <= 0
+% only A will be used
+if strcmp(type, 'column2normSquareFro')
+  beta = parameterList;
+  p = zeros(1, ca);
+  p_sum = 0;
+  if ca ~= rb
+    return;
+  end 
+  for i = 1:ca
+    p(i) = norm(A(:,i))^2 * beta / norm(A, 'fro');;
+  end
+end
+
+
+% type = 'column2nomrSquare2norm', return p(i) = beta * A_k_column_2norm^2 / sum_j(A_j_column_2norm^2)
+% beta = parameterList
+% don't put parameterList to be more than one value, don't put parameterList <= 0
+% only A will be used
+if strcmp(type, 'column2normSquare2norm')
+  beta = parameterList;
+  p = zeros(1, ca);
+  p_sum = 0;
+  if ca ~= rb
+    return;
+  end 
+  for i = 1:ca
+    p(i) = norm(A(:,i))^2 * beta;
+    p_sum = p_sum + p(i)/beta;
+  end
+  for i = 1:ca
+    p(i) = p(i)/p_sum;
+  end
+end
+
 
 
 % -------- return pdf and cdf ---------
