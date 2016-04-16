@@ -29,6 +29,22 @@ if strcmp(type, 'column2norm')
 end
 
 
+% type == 'column2normFro', return p(i) = beta * A_k_column_2norm * B_k_row_2norm / (A_fro*B_fro)
+% beta = parameterList
+% don't put parameterList to be more than one value, don't put parameterList <= 0
+if strcmp(type, 'column2normFro')
+  beta = parameterList;
+  p = zeros(1, ca);
+  p_sum = norm(A, 'fro') * norm(B, 'fro');
+  if ca ~= rb
+    return;
+  end 
+  for i = 1:ca
+    p(i) = norm(A(:,i)) * norm(B(i,:)) * beta / p_sum;
+  end
+end
+
+
 % type == 'elementSquare', return elementwise sampling probability p(i,j), but in a list format
 % finally in the list p(i,j) = p((i-1)*c+j) 
 % based on drines paper
@@ -58,16 +74,13 @@ end
 % type = 'column2nomrSquareFro', return p(i) = beta * A_k_column_2norm^2 / A_frob^2
 % beta = parameterList
 % don't put parameterList to be more than one value, don't put parameterList <= 0
-% only A will be used
+% only matrix A will be used
 if strcmp(type, 'column2normSquareFro')
   beta = parameterList;
   p = zeros(1, ca);
-  p_sum = 0;
-  if ca ~= rb
-    return;
-  end 
+  p_sum = norm(A, 'fro');
   for i = 1:ca
-    p(i) = norm(A(:,i))^2 * beta / norm(A, 'fro');;
+    p(i) = norm(A(:,i))^2 * beta / p_sum;
   end
 end
 
@@ -75,14 +88,11 @@ end
 % type = 'column2nomrSquare2norm', return p(i) = beta * A_k_column_2norm^2 / sum_j(A_j_column_2norm^2)
 % beta = parameterList
 % don't put parameterList to be more than one value, don't put parameterList <= 0
-% only A will be used
+% only matrix A will be used
 if strcmp(type, 'column2normSquare2norm')
   beta = parameterList;
   p = zeros(1, ca);
   p_sum = 0;
-  if ca ~= rb
-    return;
-  end 
   for i = 1:ca
     p(i) = norm(A(:,i))^2 * beta;
     p_sum = p_sum + p(i)/beta;
@@ -91,6 +101,27 @@ if strcmp(type, 'column2normSquare2norm')
     p(i) = p(i)/p_sum;
   end
 end
+
+
+% type = 'uniform', will return uniform sampling p(i) = 1/n
+% isRow = parameterList
+% unless isRow == 'row', will do column sample
+% only matrix A will be used
+if strcmp(type, 'uniform')
+  isRow = parameterList;
+  if strcmp(isRow, 'row')
+    p = zeros(1, ra);
+    n = ra;
+  else
+    p = zeros(1, ca);
+    n = ca;
+  end
+  p_sum = 0;
+  for i = 1:n
+    p(i) = 1/n;
+  end
+end
+
 
 
 
