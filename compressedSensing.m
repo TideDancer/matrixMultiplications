@@ -15,5 +15,7 @@ M = randn(rows, n);
 P = (M*A)*B;
 
 % reconstruct
-
+% need to invoke l1-magic package (compressed sensing reconstruction package written in matlab) and use l1eq_pd() function
+% refer to l1-magic package user mannual
+addpath 'l1magic/l1magic/Optimization/';
 
