@@ -138,7 +138,9 @@ while (~done)
     w1p = -(w3 - A*(w1./sigx - w2.*sig2./(sigx.*sig1)));
     H11p = A*(sparse(diag(1./sigx))*A');
     opts.POSDEF = true; opts.SYM = true;
-    [dv,hcond] = linsolve(H11p, w1p, opts);
+    % changed by xingyu, original is: [dv,hcond] = linsolve(H11p, w1p, opts); 
+    [dv,hcond] = linsolve(H11p, w1p); 
+
     if (hcond < 1e-14)
       disp('Matrix ill-conditioned.  Returning previous iterate.  (See Section 4 of notes for more information.)');
       xp = x;
@@ -175,7 +177,7 @@ while (~done)
     s = beta*s;
     backiter = backiter + 1;
     if (backiter > 32)
-      disp('Stuck backtracking, returning last iterate.  (See Section 4 of notes for more information.)')
+      %disp('Stuck backtracking, returning last iterate.  (See Section 4 of notes for more information.)')
       xp = x;
       return
     end
@@ -198,12 +200,12 @@ while (~done)
   
   done = (sdg < pdtol) | (pditer >= pdmaxiter);
   
-  disp(sprintf('Iteration = %d, tau = %8.3e, Primal = %8.3e, PDGap = %8.3e, Dual res = %8.3e, Primal res = %8.3e',...
-    pditer, tau, sum(u), sdg, norm(rdual), norm(rpri)));
+  %disp(sprintf('Iteration = %d, tau = %8.3e, Primal = %8.3e, PDGap = %8.3e, Dual res = %8.3e, Primal res = %8.3e',...
+  %  pditer, tau, sum(u), sdg, norm(rdual), norm(rpri)));
   if (largescale)
-    disp(sprintf('                  CG Res = %8.3e, CG Iter = %d', cgres, cgiter));
+    %disp(sprintf('                  CG Res = %8.3e, CG Iter = %d', cgres, cgiter));
   else
-    disp(sprintf('                  H11p condition number = %8.3e', hcond));
+    %disp(sprintf('                  H11p condition number = %8.3e', hcond));
   end
   
 end
