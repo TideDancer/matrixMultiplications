@@ -3,7 +3,7 @@
 % temporily use linear search for simplicity
 % if search beyond last value, will return -1
 
-function index = findByInterval(list, value);
+function index = findInInterval(list, value);
 if sort(list, 'ascend') == list
   if value <= list(1)
     index = 1;
