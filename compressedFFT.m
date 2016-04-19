@@ -1,5 +1,5 @@
-n = 2048;
-b = log2(n);
+n = 1024;
+b = ceil(log10(n));
 d = 20;
 A = randn(n,n); B = randn(n,n);
 

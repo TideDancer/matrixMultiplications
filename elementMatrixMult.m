@@ -5,7 +5,7 @@
 m = 1024;
 n = 1024;
 p = 1024;
-c = log2(n);
+c = round(log10(n));
 
 A = randn(m,n);
 B = randn(n,p);

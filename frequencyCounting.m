@@ -1,10 +1,10 @@
 % very problematic !!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 % input A n*n, B n*n, A,B are non-negative matrix
-n = 256;
+n = 1024;
 A = rand(n,n);
 B = rand(n,n);
-b = log2(n);
+b = round(log10(n));
 
 % ------------- compute summary -------------
 S = zeros(b,3);

@@ -12,7 +12,10 @@ PA = []; PB = [];
 % Prob[||PA*PB-A*B||_2 <= epsilon*A_2*B_2] >= 1-delta
 % [delta, epsilon, const] = parameterList, delta and epsilon in (0,1), const is a constant
 if strcmp(type, 'kyrillidis2014approximate')
-  [delta, epsilon, const] = parameterList;
+  delta = parameterList(1);
+  epsilon = parameterList(2);
+  const = parameterList(3);
+
   if ca ~= rb
     return;
   end
@@ -23,9 +26,12 @@ if strcmp(type, 'kyrillidis2014approximate')
   % !!!!!!!!!!!!! NOTE THAT THIS STEP OF SVD TAKES TOO MUCH TIME AS IT'S AS HARD AS ORIGINAL PROBLEM !!!!!!!!!!!!!!!!!
   nra = sum(max(sa))/max(max(sa));
   nrb = sum(max(sb))/max(max(sb));
+  
+  % !!!!!!!!!!!!!for approximate nr, set it to small number otherwise too big !!!!!!!!!!!
 
-  t = const*((nra + nrb + log2(log2(1/epsilon)) + log2(1/delta)) / epsilon^2);
-  G = randn(t,d).*sqrt(1/t);
+  t = const*((nra + nrb + log10(log10(1/epsilon)) + log10(1/delta)) / epsilon^2);
+  t = round(t);
+  G = randn(t,ca).*sqrt(1/t);
   PA = A*G'; PB = G*B;
   return;
 end

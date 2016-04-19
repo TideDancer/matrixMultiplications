@@ -61,10 +61,10 @@ if strcmp(type, 'elementSquare')
   A_F2 = A_F^2;
   for i = 1:ra
     for j = 1:ca
-      if abs(A(i,j)) > A_F log2(2*n)^3
-        p((i-1)*c+j) = min(1, l * A(i,j)^2 / A_F2);
+      if abs(A(i,j)) > A_F*log10(2*n)^3
+        p((i-1)*ca+j) = min(1, l * A(i,j)^2 / A_F2);
       else
-        p((i-1)*c+j) = min(1, sqrt(l) * abs(A(i,j)) * log2(2*n)^3 / (sqrt(2*n) * A_F) ); 
+        p((i-1)*ca+j) = min(1, sqrt(l) * abs(A(i,j)) * log10(2*n)^3 / (sqrt(2*n) * A_F) ); 
       end
     end
   end

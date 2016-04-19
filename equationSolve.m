@@ -1,5 +1,5 @@
 % input A m*n, B n*p
-n = 128;
+n = 256;
 
 % dense matrix following normal distribution
 A = randn(n,n);

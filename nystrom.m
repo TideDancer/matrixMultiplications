@@ -6,7 +6,7 @@ p = 1024;
 % dense matrix following normal distribution
 A = randn(m,n);
 B = randn(n,p);
-k = log2(n);
+k = round(log10(n));
 
 % ------------- multiplication routing -------------
 T = zeros(n,1);
