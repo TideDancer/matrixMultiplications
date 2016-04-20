@@ -16,8 +16,8 @@ B = randn(n,p);
 S = zeros(m,n);
 for i = 1:m
   for j = 1:n
-    if rand <= pdf((i-1)*c+j)
-      S(i,j) = A(i,j)/pdf((i-1)*c+j);
+    if rand <= pdf((i-1)*n+j)
+      S(i,j) = A(i,j)/pdf((i-1)*n+j);
     else
       S(i,j) = 0;
     end
