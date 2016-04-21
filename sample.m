@@ -45,32 +45,6 @@ if strcmp(type, 'column2normFro')
 end
 
 
-% type == 'elementSquare', return elementwise sampling probability p(i,j), but in a list format
-% finally in the list p(i,j) = p((i-1)*c+j) 
-% based on drines paper
-% only accept one matrix A and compute p corresponding to A, thus B can be anything
-% parameter list is [n, l], where n is inner dimension
-if strcmp(type, 'elementSquare')
-  if length(parameterList) ~= 2
-    disp('put [n, l] as parameterList');
-    return;
-  end
-  n = parameterList(1); l = parameterList(2);
-  p = zeros(1,ra*ca);
-  A_F = norm(A, 'fro');
-  A_F2 = A_F^2;
-  for i = 1:ra
-    for j = 1:ca
-      if abs(A(i,j)) > A_F*log10(2*n)^3
-        p((i-1)*ca+j) = min(1, l * A(i,j)^2 / A_F2);
-      else
-        p((i-1)*ca+j) = min(1, sqrt(l) * abs(A(i,j)) * log10(2*n)^3 / (sqrt(2*n) * A_F) ); 
-      end
-    end
-  end
-end
-
-
 % type = 'column2nomrSquareFro', return p(i) = beta * A_k_column_2norm^2 / A_frob^2
 % beta = parameterList
 % don't put parameterList to be more than one value, don't put parameterList <= 0

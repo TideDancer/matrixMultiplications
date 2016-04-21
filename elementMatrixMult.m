@@ -5,39 +5,21 @@
 m = 1024;
 n = 1024;
 p = 1024;
-c = round(log10(n));
 
 A = randn(m,n);
 B = randn(n,p);
 
 % ------------- multiplication routing -------------
 % the parameter l is to be tuned, here as default 1, but need to check paper
-[pdf, cdf] = sample(A, [], 'elementSquare', [n,1]); % l is a parameter needs to be tuned
-S = zeros(m,n);
-for i = 1:m
-  for j = 1:n
-    if rand <= pdf((i-1)*n+j)
-      S(i,j) = A(i,j)/pdf((i-1)*n+j);
-    else
-      S(i,j) = 0;
-    end
-  end
-end
+l = 1;
+S = sampleElementL2(A, l);
+R = sampleElementL2(B, l);
 
-[pdf, cdf] = sample(B, [], 'elementSquare', [n,1]); % l is a parameter needs to be tuned
-R = zeros(n,p);
-for i = 1:n
-  for j = 1:p
-    if rand <= pdf((i-1)*p+j)
-      R(i,j) = B(i,j)/pdf((i-1)*p+j);
-    else
-      R(i,j) = 0;
-    end
-  end
-end
+% sparsify representation significantly reduce computing time
+S = sparse(S);
+R = sparse(R);
 
 C_approx = S*R;
-
 
 % ------------------- compare --------------------------
 C = A*B;
