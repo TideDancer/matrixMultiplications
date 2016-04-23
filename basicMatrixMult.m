@@ -12,12 +12,14 @@ B = randn(n,p);
 
 % ------------- multiplication routing -------------
 [pdf, cdf] = sample(A,B,'column2norm',1);
+ind = getIndexFromPdf(cdf, c, 1);
+
 C = []; R = [];
-for t = 1:c
-  i = findInInterval(cdf, rand); % sample with replacement, as paper said
-  C = [C A(:,i)/sqrt(c*pdf(i))];
-  R = [R; B(i,:)/sqrt(c*pdf(i))];
+for i = 1:c
+  C = [C  A(:,ind(i))./sqrt(c*pdf(ind(i)))];
+  R = [R; B(ind(i),:)./sqrt(c*pdf(ind(i)))];
 end
+
 C_approx = C*R; 
   
 
