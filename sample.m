@@ -101,7 +101,7 @@ end
 
 % -------- return pdf and cdf ---------
 if length(p) > 0
-  pdf = p;
+  pdf = p./sum(p); % ensure sum of pdf is 1
   cdf = pdf;
   for i = 2:length(pdf)
     cdf(i) = cdf(i-1) + pdf(i);

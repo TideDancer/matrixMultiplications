@@ -1,9 +1,9 @@
 % given pdf, return [num] sample index using [pdf]
-% if isCdf == 1, then this pdf should be a cdf here
+% if isCdf == 1, then pdf parameter is replaced with cdf, and this function will sample using cdf
 % index is in sorted order
 % assume pdf is already normalized, meaning sum(pdf) = 1
 
-index = getIndexFromPdf(pdf, num, isCdf);
+function index = findIndexFromPdf(pdf, num, isCdf);
 
 if isCdf == 1
   cdf = pdf;

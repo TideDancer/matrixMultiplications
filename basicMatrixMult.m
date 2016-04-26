@@ -12,7 +12,7 @@ B = randn(n,p);
 
 % ------------- multiplication routing -------------
 [pdf, cdf] = sample(A,B,'column2norm',1);
-ind = getIndexFromPdf(cdf, c, 1);
+ind = findIndexFromPdf(cdf, c, 1);
 
 C = []; R = [];
 for i = 1:c
