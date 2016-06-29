@@ -36,4 +36,8 @@ if strcmp(type, 'kyrillidis2014approximate')
   return;
 end
 
-
+if strcmp(type, 'FJLT')
+  % for a vector x
+  % compute Dx, where D is diagonal +1 -1 matrix
+  % compute HDx, using matlab fwht function to do Fast Walsh-Hadamard transform
+  % compute PHDx, P is random generated matrix following certain distribution based on the 2009 Ailon paper
