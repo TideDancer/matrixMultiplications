@@ -1,0 +1,4 @@
+GR        ca-GrQc         https://snap.stanford.edu/data/ca-GrQc.html
+HEP       ca-cit-HepTh    https://snap.stanford.edu/data/ca-HepTh.html
+Enron     email-Enron     https://snap.stanford.edu/data/email-Enron.html
+
