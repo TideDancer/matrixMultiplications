@@ -36,8 +36,28 @@ if strcmp(type, 'kyrillidis2014approximate')
   return;
 end
 
+% classical fast johnson linderstrauss transform
 if strcmp(type, 'FJLT')
-  % for a vector x
-  % compute Dx, where D is diagonal +1 -1 matrix
+  delta = parameterList(1);
+  epsilon = parameterList(2);
+  const = parameterList(3);
+
+  % consider matrix A and B are multi vector set, then operate on those vectors
+
+  % compute Dx, where D is diagonal +1 -1 matrix, which is to randomly assign + - sign to each element of A and B
+  D = sign(randn(ra,ca));
+  PA = D.*A;
+  D = sign(randn(rb,cb));
+  PB = D.*B;
+
   % compute HDx, using matlab fwht function to do Fast Walsh-Hadamard transform
+  % note that each column will be pad to power of 2
+  PA = fwht(PA);
+  PB = fwht(PB);
+
   % compute PHDx, P is random generated matrix following certain distribution based on the 2009 Ailon paper
+  q = (log10(ra))^2/ca;
+  if q > 1
+    q = 1;
+  end 
+
