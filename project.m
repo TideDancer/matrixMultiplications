@@ -31,7 +31,7 @@ if strcmp(type, 'kyrillidis2014approximate')
 
   t = const*((nra + nrb + log10(log10(1/epsilon)) + log10(1/delta)) / epsilon^2);
   t = round(t);
-  G = randn(t,ca).*sqrt(1/t);
+  G = randn(t,ca).*sqrt(1/t);  % assuming A,B has same size here
   PA = A*G'; PB = G*B;
   return;
 end
@@ -41,6 +41,7 @@ if strcmp(type, 'FJLT')
   delta = parameterList(1);
   epsilon = parameterList(2);
   const = parameterList(3);
+  k = const * log10(ca) / epsilon^2;
 
   % consider matrix A and B are multi vector set, then operate on those vectors
 
@@ -52,7 +53,8 @@ if strcmp(type, 'FJLT')
 
   % compute HDx, using matlab fwht function to do Fast Walsh-Hadamard transform
   % note that each column will be pad to power of 2
-  PA = fwht(PA);
+  PA = fwht(PA'); % A need to be transposed as A's row vector will be projected, while B's column vector will be projected
+  % because for final A*B, A's row will corresponds to B's column
   PB = fwht(PB);
 
   % compute PHDx, P is random generated matrix following certain distribution based on the 2009 Ailon paper
@@ -60,4 +62,19 @@ if strcmp(type, 'FJLT')
   if q > 1
     q = 1;
   end 
+  P = rand(k, ca);
+  P = (P < q);
+  P1 = sqrt(1/q) * randn(ra,ca);
+  P = P.*P1;
+  PA = P * PA; PA = PA'; % here PA need to be transposed to form d x k matrix, then PB will be k x d matrix, their product will goes back to d x d matrix
 
+  q = (log10(ra))^2/ca;
+  if q > 1
+    q = 1;
+  end 
+  P = rand(k, ca);
+  P = (P < q);
+  P1 = sqrt(1/q) * randn(ra,ca);
+  P = P.*P1;
+  PB = P * PB;
+end
