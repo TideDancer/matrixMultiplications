@@ -78,3 +78,12 @@ if strcmp(type, 'FJLT')
   P = P.*P1;
   PB = P * PB;
 end
+
+% according to T.Sarlos paper, there is tug-of-war projection method achieve same time bound
+if strcmp(type, 'tug-of-war')
+  delta = parameterList(1);
+  epsilon = parameterList(2);
+  const = parameterList(3);
+  
+end
+ 
