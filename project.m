@@ -5,6 +5,9 @@ function [PA, PB] = project(A, B, type, parameterList);
 
 [ra, ca] = size(A);
 [rb, cb] = size(B);
+delta = parameterList(1);
+epsilon = parameterList(2);
+const = parameterList(3);
 PA = []; PB = [];
 
 % type == 'kyrillidis2014approximate', return projected matrix PA, PB
@@ -12,10 +15,6 @@ PA = []; PB = [];
 % Prob[||PA*PB-A*B||_2 <= epsilon*A_2*B_2] >= 1-delta
 % [delta, epsilon, const] = parameterList, delta and epsilon in (0,1), const is a constant
 if strcmp(type, 'kyrillidis2014approximate')
-  delta = parameterList(1);
-  epsilon = parameterList(2);
-  const = parameterList(3);
-
   if ca ~= rb
     return;
   end
@@ -38,45 +37,9 @@ end
 
 % classical fast johnson linderstrauss transform
 if strcmp(type, 'FJLT')
-  delta = parameterList(1);
-  epsilon = parameterList(2);
-  const = parameterList(3);
-  k = const * log10(ca) / epsilon^2;
-
-  % consider matrix A and B are multi vector set, then operate on those vectors
-
-  % compute Dx, where D is diagonal +1 -1 matrix, which is to randomly assign + - sign to each element of A and B
-  D = sign(randn(ra,ca));
-  PA = D.*A;
-  D = sign(randn(rb,cb));
-  PB = D.*B;
-
-  % compute HDx, using matlab fwht function to do Fast Walsh-Hadamard transform
-  % note that each column will be pad to power of 2
-  PA = fwht(PA'); % A need to be transposed as A's row vector will be projected, while B's column vector will be projected
-  % because for final A*B, A's row will corresponds to B's column
-  PB = fwht(PB);
-
-  % compute PHDx, P is random generated matrix following certain distribution based on the 2009 Ailon paper
-  q = (log10(ra))^2/ca;
-  if q > 1
-    q = 1;
-  end 
-  P = rand(k, ca);
-  P = (P < q);
-  P1 = sqrt(1/q) * randn(ra,ca);
-  P = P.*P1;
-  PA = P * PA; PA = PA'; % here PA need to be transposed to form d x k matrix, then PB will be k x d matrix, their product will goes back to d x d matrix
-
-  q = (log10(ra))^2/ca;
-  if q > 1
-    q = 1;
-  end 
-  P = rand(k, ca);
-  P = (P < q);
-  P1 = sqrt(1/q) * randn(ra,ca);
-  P = P.*P1;
-  PB = P * PB;
+  PA = fastJLT(A', [delta, epsilon, const]);
+  PA = PA';
+  PB = fastJLT(B, [delta, epsilon, const]);
 end
 
 % according to T.Sarlos paper, there is tug-of-war projection method achieve same time bound
