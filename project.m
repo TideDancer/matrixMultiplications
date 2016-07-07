@@ -42,11 +42,32 @@ if strcmp(type, 'FJLT')
   PB = fastJLT(B, [delta, epsilon, const]);
 end
 
-% according to T.Sarlos paper, there is tug-of-war projection method achieve same time bound
+% according to T.Sarlos 2006 paper algorithm 1, there is tug-of-war projection method achieve same time bound
+% return value PA and PB, which can be multiplied as PA*PB to get approximated matrix product
+% note that dimension of A or B need to be larger than 16
 if strcmp(type, 'tug-of-war')
-  delta = parameterList(1);
-  epsilon = parameterList(2);
-  const = parameterList(3);
-  
+  k = round(log10(1/delta))
+  z = zeros(1,k); SB = zeros(1,k); AS = zeros(1,k);
+  for i = 1: k
+    S = sign(randn(round(1/epsilon^2), ca));
+    SB(i) = S*B;
+    AS(i) = A*S'; 
+    kk = round(2*(k + log10(k)));
+    y = zeros(1,kk);
+    for j = 1: kk
+      Q = sign(randn(16, cb))
+      BQ = B*Q';
+      X = A*BQ;
+      SBQ = SB*Q';
+      X_hat = AS * SBQ;
+      y(j) = norm(X-X_hat, 'fro')^2;
+    end
+    z(i) = median(y);
+  end
+  [M,i] = min(z);
+  PA = AS;
+  PB = SB;
+  return; 
 end
+
  
