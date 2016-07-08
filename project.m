@@ -65,8 +65,8 @@ if strcmp(type, 'tug-of-war')
     z(i) = median(y);
   end
   [M,i] = min(z);
-  PA = AS;
-  PB = SB;
+  PA = AS(i);
+  PB = SB(i);
   return; 
 end
 
