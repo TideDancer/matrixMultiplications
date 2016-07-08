@@ -29,10 +29,10 @@ elseif strcmp(type, 'sparse')
   density = parameterList(1);
 
   if strcmp(dist, 'normal')
-    M = sprandn(n, density);
+    M = sprandn(n, n, density);
 
   elseif strcmp(dist, 'uniform')
-    M = sprand(n, density);
+    M = sprand(n, n, density);
 
   end
 
