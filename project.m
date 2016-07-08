@@ -1,5 +1,7 @@
 % support several type of J-L based projecting
 % parameterList define parameters
+% In parameterlist, delta is fail probability, epsilon is a parameter that multiply to original norms
+
 
 function [PA, PB] = project(A, B, type, parameterList);
 

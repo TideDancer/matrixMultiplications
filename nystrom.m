@@ -1,11 +1,8 @@
 % input A m*n, B n*p
-m = 1024;
-n = 1024;
-p = 1024;
 
-% dense matrix following normal distribution
-A = randn(m,n);
-B = randn(n,p);
+function C_approx = nystrom(A, B);
+
+[m,n] = size(A);
 k = round(log10(n));
 
 % ------------- multiplication routing -------------
@@ -35,12 +32,4 @@ AJ = A(:, J);
 BJ = B(J, :);
 C_approx = AJ*diag(w)*BJ;
 
-% ------------------- compare --------------------------
-C = A*B;
-error = C - C_approx;
-A_norm = norm(A, 'fro');
-B_norm = norm(B, 'fro');
-C_norm = norm(C, 'fro');
-AB_norm = A_norm * B_norm;
-error_norm = norm(error, 'fro');
-
+return;
