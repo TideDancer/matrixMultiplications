@@ -1,11 +1,11 @@
 % given pdf, return [num] sample index using [pdf]
-% if isCdf == 1, then pdf parameter is replaced with cdf, and this function will sample using cdf
+% if isCdf == 'cdf', then pdf parameter is replaced with cdf, and this function will sample using cdf
 % index is in sorted order
 % assume pdf is already normalized, meaning sum(pdf) = 1
 
 function index = findIndexFromPdf(pdf, num, isCdf);
 
-if isCdf == 1
+if strcmp(isCdf, 'cdf')
   cdf = pdf;
 else
   cdf = pdf;

@@ -1,19 +1,16 @@
 % in Drines paper
 % A m*n, B n*p
 % sample c columns of A and corresponding rows of B
+% sampleType corresponds to sampleElement function input argument, including 'l1' and 'l2'
+% parameterList corresponds to sampleElement function, for 'l2', defult value l is 1
 
-m = 1024;
-n = 1024;
-p = 1024;
-
-A = randn(m,n);
-B = randn(n,p);
+function C_approx = elementMatrixMult(A, B, sampleType, parameterList);
 
 % ------------- multiplication routing -------------
 % the parameter l is to be tuned, here as default 1, but need to check paper
-l = 1;
-S = sampleElementL2(A, l);
-R = sampleElementL2(B, l);
+l = parameterList(1);
+S = sampleElement(A, 'l2', l);
+R = sampleElement(B, 'l2', l);
 
 % sparsify representation significantly reduce computing time
 S = sparse(S);
@@ -21,11 +18,4 @@ R = sparse(R);
 
 C_approx = S*R;
 
-% ------------------- compare --------------------------
-C = A*B;
-error = C - C_approx;
-A_norm = norm(A, 'fro');
-B_norm = norm(B, 'fro');
-AB_norm = A_norm * B_norm;
-C_norm = norm(C, 'fro');
-error_norm = norm(error, 'fro');
+return;

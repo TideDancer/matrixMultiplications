@@ -36,5 +36,22 @@
 
 % random matrix test 
 dim = 2^10;
+
 A = squareMatrixGen(dim, 'dense', 'normal');
 B = squareMatrixGen(dim, 'dense', 'normal');
+
+C_approx = basicMatrixMult(A, B, 'column2norm', 1);
+
+C_approx = elementMatrixMult(A, B, 'l2', 1);
+
+
+
+% ------------------- compare --------------------------
+C = A*B;
+error = C - C_approx;
+A_norm = norm(A, 'fro');
+B_norm = norm(B, 'fro');
+AB_norm = A_norm * B_norm;
+C_norm = norm(C, 'fro');
+error_norm = norm(error, 'fro');
+
