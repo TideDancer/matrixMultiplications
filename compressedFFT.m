@@ -1,7 +1,9 @@
-n = 1024;
+function C_approx = compressedFFT(A, B, parameterList);
+
+[r, n] = size(A);
 b = ceil(log10(n));
-d = 20;
-A = randn(n,n); B = randn(n,n);
+
+d = parameterList(1); % default value = 20;
 
 % --------------------- compressed product --------------
 s1_t = []; s2_t = []; h1_t = []; h2_t = []; p_t = [];
@@ -48,11 +50,4 @@ for i = 1:n
     end
 end
 
-% ------------------- compare --------------------------
-C = A*B;
-error = C - C_approx;
-A_norm = norm(A, 'fro');
-B_norm = norm(B, 'fro');
-AB_norm = A_norm * B_norm;
-C_norm = norm(C, 'fro');
-error_norm = norm(error, 'fro');
+return;

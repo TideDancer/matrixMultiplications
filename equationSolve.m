@@ -1,10 +1,8 @@
 % input A m*n, B n*p
-n = 1024;
 
-% dense matrix following normal distribution
-A = randn(n,n);
-B = randn(n,n);
+function C_approx = equationSolve(A, B);
 
+[r, n] = size(A);
 
 % ------------- multiplication routing -------------
 % build vector v
@@ -72,12 +70,4 @@ for i = 1:n
   end
 end
 
-
-% ------------------- compare --------------------------
-C = A*B;
-error = C - C_approx;
-A_norm = norm(A, 'fro');
-B_norm = norm(B, 'fro');
-AB_norm = A_norm * B_norm;
-C_norm = norm(C, 'fro');
-error_norm = norm(error, 'fro');
+return;

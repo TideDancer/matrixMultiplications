@@ -1,9 +1,14 @@
 % very problematic !!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 % input A n*n, B n*n, A,B are non-negative matrix
-n = 1024;
-A = rand(n,n);
-B = rand(n,n);
+
+function C_approx = frequencyCounting(A, B);
+
+% input matrix checking, any element < 0 will be set to 0
+A = A.*(A>0);
+B = B.*(B>0);
+
+[r, n] = size(A);
 b = round(log10(n));
 
 % ------------- compute summary -------------
@@ -45,14 +50,4 @@ for i = 1:n
   end
 end
 
-
-
-% ------------------- compare --------------------------
-C = A*B;
-error = C - C_approx;
-A_norm = norm(A, 'fro');
-B_norm = norm(B, 'fro');
-C_norm = norm(C, 'fro');
-AB_norm = A_norm * B_norm;
-
-error_norm = norm(error, 'fro');
+return;

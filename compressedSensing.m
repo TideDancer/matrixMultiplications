@@ -1,14 +1,13 @@
 % input A m*n, B n*p
 % !!!!!!!!! deal with (C,gamma)-compressibe matrix A and B !!!!!!!!!!!!!!!
-n = 1024;
 
-% dense matrix following normal distribution
-A = randn(n,n);
-B = randn(n,n);
+function C_approx = compressedSensing(A, B, parameterList);
+
+[r, n] = size(A);
 
 % C-gamma compressible
-const = 1;
-gamma = 1;% c-gamma compressible, check definition
+const = parameterList(1); % default = 1;
+gamma = parameterList(2); % default = 1; c-gamma compressible, check definition
 m = round(log10(n));
 
 % build measurement matrix
@@ -38,12 +37,4 @@ for i = 1:n
   C_approx = [C_approx, xp];
 end
 
-
-% ------------------- compare --------------------------
-C = A*B;
-error = C - C_approx;
-A_norm = norm(A, 'fro');
-B_norm = norm(B, 'fro');
-AB_norm = A_norm * B_norm;
-C_norm = norm(C, 'fro');
-error_norm = norm(error, 'fro');
+return;
