@@ -11,6 +11,7 @@ C_approx = basicMatrixMult(A, B, 'column2norm', 1); % coloum 2-norm based sampli
 C_approx = elementMatrixMult(A, B, 'l2', 1); % l-2 based element-wise sampling
 
 C_approx = randomProjMult(A, B, 'kyrillidis2014approximate', [1e-3, 1e-3, 1e-6]); % kyrillidis2014 paper
+C_approx = randomProjMult(A, B, 'FJLT', [1e-2, 1e-2, 1]);
 
 C_approx = nystrom(A, B);
 
@@ -21,6 +22,8 @@ C_approx = equationSolve(A, B);
 C_approx = frequencyCounting(A, B); % A, B need to be non-negative matrix !!!!!!!!!!
 
 C_approx = compressedFFT(A, B, 20); % parameter default value is 20
+
+
 
 
 % ------------------- compare --------------------------
