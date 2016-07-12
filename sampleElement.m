@@ -1,4 +1,5 @@
 % element-wise sampling routing
+% return sampled matrix
 % include L1 and L2 based routing
 
 function S = sampleElement(A, type, parameterList);
@@ -46,9 +47,15 @@ elseif strcmp(type, 'l1')
   % l1 sampling according to the {Achlioptas NearOptimal} paper
   % return a sketch S for data matrix A
   % input is data matrix A, 
-  % parameterList is sampling budget s, failure probability delta
+  % parameterList epsilon, usually set to be 1e-2, failure probability delta, usually set to be 1/n
   
-  s = parameterList(1);
+  af = norm(A, 'fro');
+  a2 = norm(A, 2);
+  a1 = norm(A, 1);
+  sr = af^2/a2^2;
+  nd = a1^2/af^2;
+  
+  epsilon = parameterList(1);
   delta = parameterList(2);
   
   % ------------------ compute row distribution subrouting ------------------
@@ -69,6 +76,9 @@ elseif strcmp(type, 'l1')
     rho(i) = (alpha*z(i)/2/solx + sqrt((alpha*z(i)/2/solx)^2 + beta*z(i)/solx))^2;
   end
   
+  nrd = sum(z)/af^2;
+  s = nrd * sr / epsilon^2 * log10(n/delta) + sqrt(sr * nd / epsilon^2 * log10(n/delta));
+
   % ------------------ main routing ---------------------
   pdf = zeros(1,m*n);
   cdf = zeros(1,m*n+1);
