@@ -1,19 +1,30 @@
 % list must be sorted, in ascending order !!!!
-% can be implemented using binary search for high performance searching
-% temporily use linear search for simplicity
-% if search beyond last value, will return -1
+% implemented using binary search
+% if not in range, will return -1
 
 function index = findInInterval(list, value);
 if sort(list, 'ascend') == list
   if value <= list(1)
     index = 1;
     return;
+  elseif value >= list(end)
+    index = length(list);
+    return;
   else
-    for index = 2: length(list)
-      if value <= list(index) 
+    left = 1;
+    right = length(list);
+    mid = ceil((left+right)/2);
+    while value <= list(mid-1) || value > list(mid)
+      if value == list(mid-1)
+        index = mid - 1;
         return;
+      elseif value < list(mid-1)
+        right = mid;
+      else
+        left = mid - 1;
       end
+      mid = ceil((left+right)/2);
     end
-    index = -1;
+    index = mid;
   end
 end

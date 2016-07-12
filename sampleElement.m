@@ -3,7 +3,7 @@
 % include L1 and L2 based routing
 
 function S = sampleElement(A, type, parameterList);
-[m, n] = size(A)
+[m, n] = size(A);
 	
 	
 if strcmp(type, 'l2')
@@ -63,22 +63,39 @@ elseif strcmp(type, 'l1')
     z(i) = norm(A(i,:), 1); % here ignore constant
   end
   
+  % compute s
+  nrd = sum(z)/af^2;
+  s = nrd * sr / epsilon^2 * log10(n/delta) + sqrt(sr * nd / epsilon^2 * log10(n/delta));
+  
   alpha = sqrt(log10(m+n)/delta/s);
   beta = log10((m+n)/delta)/(3*s);
   
-  % directly use solve() in matlab. but in practice could use binary search because sum(rho) are strictly decreasing order w.r.t. x
-  syms x;
-  eqn = sum((alpha.*z(1:n)/2/x + sqrt((alpha.*z(1:n)/2/x).^2 + beta.*z(1:n)/x)).^2) == 1;
-  solx = double(vpasolve(eqn, x)); % need to use double() to convert sym type to double
+  % use binary search because sum(rho) are strictly decreasing order w.r.t. mid
+  precision = 1e-2;
+  % set left to make sure sum > 1, then binary search to find right boundary
+  left = alpha * min(z);
+  right = 2*left;
+  while sum((alpha.*z(1:m)/2/right + sqrt((alpha.*z(1:m)/2/right).^2 + beta.*z(1:m)/right)).^2) > 1
+    right = 2* right;
+  end
+  % next with left and right boundary, do binary search
+  mid = (left + right) / 2;
+  sums = sum((alpha.*z(1:m)/2/mid + sqrt((alpha.*z(1:m)/2/mid).^2 + beta.*z(1:m)/mid)).^2);
+  while sums > 1+precision || sums < 1-precision
+    if sums > 1+precision
+      left = mid;
+    else
+      right = mid;
+    end
+    mid = (left + right) /2;
+    sums = sum((alpha.*z(1:m)/2/mid + sqrt((alpha.*z(1:m)/2/mid).^2 + beta.*z(1:m)/mid)).^2);
+  end
   
   rho = zeros(m, 1);
   for i = 1:m
-    rho(i) = (alpha*z(i)/2/solx + sqrt((alpha*z(i)/2/solx)^2 + beta*z(i)/solx))^2;
+    rho(i) = (alpha*z(i)/2/mid + sqrt((alpha*z(i)/2/mid)^2 + beta*z(i)/mid))^2;
   end
   
-  nrd = sum(z)/af^2;
-  s = nrd * sr / epsilon^2 * log10(n/delta) + sqrt(sr * nd / epsilon^2 * log10(n/delta));
-
   % ------------------ main routing ---------------------
   pdf = zeros(1,m*n);
   cdf = zeros(1,m*n+1);
