@@ -16,7 +16,7 @@ while r > n*log10(n)
   r1 = ceil(r/2);
 	ind = zeros(1,r1);
   [pdf, cdf] = sample(A_now, [], 'uniform', 'row');
-	ind = findIndexFromPdf(cdf, r1, 1);
+  ind = datasample(1:length(pdf), r1, 'Replace', false, 'Weights', pdf);
 	A_half = A_now(ind, :);
 
   % compute approximate leverage scores of A_now: u_i = a_i * (A'A)^+ * a_i'
@@ -27,7 +27,7 @@ while r > n*log10(n)
 	l = l./sum(l);
 	
 	% sample r/2 rows using leverage score as pdf
-	ind = findIndexFromPdf(l, r1, 0);
+  ind = datasample(1:length(l), r1, 'Replace', false, 'Weights', l);
 	A_now = A_now(ind, :);
 	[r, c] = size(A_now);
 end

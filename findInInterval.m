@@ -27,4 +27,6 @@ if sort(list, 'ascend') == list
     end
     index = mid;
   end
+else
+  'list not in ascend order'
 end

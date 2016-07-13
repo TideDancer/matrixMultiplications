@@ -50,7 +50,11 @@ elseif strcmp(type, 'l1')
   % parameterList epsilon, usually set to be 1e-2, failure probability delta, usually set to be 1/n
   
   af = norm(A, 'fro');
-  a2 = norm(A, 2);
+  if issparse(A)
+    a2 = norm(full(A), 2); % because 2-norm function doesn't work for sparse matrix, convert it to full here
+  else
+    a2 = norm(A, 2);
+  end
   a1 = norm(A, 1);
   sr = af^2/a2^2;
   nd = a1^2/af^2;
@@ -66,6 +70,7 @@ elseif strcmp(type, 'l1')
   % compute s
   nrd = sum(z)/af^2;
   s = nrd * sr / epsilon^2 * log10(n/delta) + sqrt(sr * nd / epsilon^2 * log10(n/delta));
+  s = round(s);
   
   alpha = sqrt(log10(m+n)/delta/s);
   beta = log10((m+n)/delta)/(3*s);
@@ -74,7 +79,7 @@ elseif strcmp(type, 'l1')
   precision = 1e-2;
   % set left to make sure sum > 1, then binary search to find right boundary
   left = alpha * min(z);
-  right = 2*left;
+  right = m*(left+1); % in case left == 0, put +1 here to avoid right to be set to zero
   while sum((alpha.*z(1:m)/2/right + sqrt((alpha.*z(1:m)/2/right).^2 + beta.*z(1:m)/right)).^2) > 1
     right = 2* right;
   end
@@ -90,7 +95,7 @@ elseif strcmp(type, 'l1')
     mid = (left + right) /2;
     sums = sum((alpha.*z(1:m)/2/mid + sqrt((alpha.*z(1:m)/2/mid).^2 + beta.*z(1:m)/mid)).^2);
   end
-  
+
   rho = zeros(m, 1);
   for i = 1:m
     rho(i) = (alpha*z(i)/2/mid + sqrt((alpha*z(i)/2/mid)^2 + beta*z(i)/mid))^2;
@@ -98,17 +103,22 @@ elseif strcmp(type, 'l1')
   
   % ------------------ main routing ---------------------
   pdf = zeros(1,m*n);
-  cdf = zeros(1,m*n+1);
   for i = 1:m
     for j = 1:n
-      pdf((i-1)*n+j) = rho(i)*abs(A(i,j)/z(i));
-      cdf((i-1)*n+j+1) = cdf((i-1)*n+j) + pdf((i-1)*n+j); 
+      if z(i) == 0
+        pdf((i-1)*n+j) = 0;       
+      else
+        pdf((i-1)*n+j) = rho(i)*abs(A(i,j)/z(i));
+      end
     end
   end
+  pdf = pdf./sum(pdf);
   
   S = zeros(m,n);
+  % sample s elements
+  indices = datasample(1:length(pdf), s, 'Replace', true, 'Weights', pdf);
   for k = 1:s
-    index = findInInterval(cdf(2:end), rand);
+    index = indices(k);
     i = ceil(index/n);
     j = mod(index, n);
     if j == 0

@@ -10,7 +10,8 @@ c = round(log10(n));
 
 % ------------- multiplication routing -------------
 [pdf, cdf] = sample(A,B,sampleType,parameterList);
-ind = findIndexFromPdf(cdf, c, 'cdf');
+ind = datasample(1:length(pdf), c, 'Replace', false, 'Weights', pdf);
+ind = sort(ind); % need to be sorted thus add them in orders to C and R
 
 C = []; R = [];
 for i = 1:c
