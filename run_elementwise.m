@@ -7,12 +7,14 @@ C_norm = [];
 error1_norm = [];
 error2_norm = [];
 
-for i = 10:15
+range = 9:13
+
+for i = range
   i
   dim = 2^i;
   
-  A = squareMatrixGen(dim, 'dense', 'normal');
-  B = squareMatrixGen(dim, 'dense', 'normal');
+  A = squareMatrixGen(dim, 'sparse', 'normal');
+  B = squareMatrixGen(dim, 'sparse', 'normal');
   
   % ||AB-SR|| <= (20 sqrt(n/l) + 100n/l) ||A||||B||
   % ||A - S|| <= epsilon ||A||
@@ -38,6 +40,5 @@ for i = 10:15
   error1_norm = [error1_norm; norm(error_1, 'fro')];
 end
 
-i = 10:15;
-save('result_element_dense_normal.mat', i, A_norm, B_norm, C_norm, error1_norm, error2_norm);
+save('result_element_dense_normal.mat', range, A_norm, B_norm, C_norm, error1_norm, error2_norm);
 
