@@ -5,5 +5,5 @@ Current version is in matlab
 Use l1magic package for compressed sensing reconstruction subrouting
 
 
-Make use armadillo with OpenBLAS and LAPACK
+In the future will make use armadillo with OpenBLAS and LAPACK
 
