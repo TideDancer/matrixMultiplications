@@ -1,0 +1,15 @@
+USE_FFTW = true;
+FFTW_DIR_LIB = '/usr/local/lib/';
+FFTW_DIR_INC = '/usr/local/include/';
+FFTW_NAME = 'libfftw3.a';
+FFTW_QUANT = 1000;
+FFTW_TIMES = 150;
+FFTW_PLANNING_LEVEL = 0;
+USE_SWHT = false;
+OBJ_EXT = '.o';
+BLAS_UNDERSCORE = true;
+LAPACK_DIR = '/Applications/MATLAB_R2014b.app';
+LAPACK_NAME = 'mwlapack';
+BLAS_DIR = '/Applications/MATLAB_R2014b.app';
+BLAS_NAME = 'mwblas';
+ADDITIONAL_FLAGS = '';
