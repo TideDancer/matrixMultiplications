@@ -2,8 +2,9 @@
 A_norm = [];
 B_norm = [];
 C_norm = [];
+errRatio1 = []; errRatio2 = []; errRatio3 = [];
 
-range = 9:13;
+range = 9:11;
 
 for i = range
   i
@@ -27,6 +28,26 @@ for i = range
   toc;
 
   % ------------------- compare --------------------------
+  tic;
+  C = A*B;
+  toc;
+  A_norm = norm(A, 'fro');
+  B_norm = norm(B, 'fro');
+  AB_norm = A_norm * B_norm;
+  C_norm = norm(C, 'fro');
+  
+  error1 = C - C_approx1;
+  error1_norm = norm(error1, 'fro');
+  errRatio1 = [errRatio1 error1_norm/AB_norm];
+  
+  error2 = C - C_approx2;
+  error2_norm = norm(error2, 'fro');
+  errRatio2 = [errRatio2 error2_norm/AB_norm];
+
+  error3 = C - C_approx3;
+  error3_norm = norm(error3, 'fro');
+  errRatio3 = [errRatio3 error3_norm/AB_norm];
+
 end
 
 

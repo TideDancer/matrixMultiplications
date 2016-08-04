@@ -10,7 +10,7 @@ function PA = fastJLT(A, parameterList)
 delta = parameterList(1);
 epsilon = parameterList(2);
 const = parameterList(3);
-k = const * log10(c) / epsilon^2;
+k = round(const * log10(c) / epsilon^2);
 
 % compute Dx, where D is diagonal +1 -1 matrix, which is to randomly assign + - sign to each element of A
 D = sign(randn(r,c));

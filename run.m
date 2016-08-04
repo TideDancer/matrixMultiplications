@@ -6,7 +6,11 @@ dim = 2^10;
 A = squareMatrixGen(dim, 'dense', 'normal');
 B = squareMatrixGen(dim, 'dense', 'normal');
 
-C_approx = basicMatrixMult(A, B, 'column2norm', 1); % coloum 2-norm based sampling
+delta = 1e-1;
+epsilon = 1e-1;
+beta = 1;
+
+C_approx = basicMatrixMult(A, B, 'column2norm', [delta, epsilon, beta]); % coloum 2-norm based sampling
 
 C_approx = elementMatrixMult(A, B, 'l2', 1); % l-2 based element-wise sampling
 

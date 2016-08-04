@@ -48,27 +48,28 @@ end
 % return value PA and PB, which can be multiplied as PA*PB to get approximated matrix product
 % note that dimension of A or B need to be larger than 16
 if strcmp(type, 'tug-of-war')
-  k = round(log10(1/delta))
-  z = zeros(1,k); SB = zeros(1,k); AS = zeros(1,k);
+  k = round(log10(1/delta));
+  rs = round(1/epsilon^2);
+  z = zeros(1,k); SB = zeros(rs, cb, k); AS = zeros(ra, rs, k);
   for i = 1: k
-    S = sign(randn(round(1/epsilon^2), ca));
-    SB(i) = S*B;
-    AS(i) = A*S'; 
+    S = sign(randn(rs, ca));
+    SB(:,:,i) = S*B;
+    AS(:,:,i) = A*S'; 
     kk = round(2*(k + log10(k)));
     y = zeros(1,kk);
     for j = 1: kk
-      Q = sign(randn(16, cb))
+      Q = sign(randn(16, cb));
       BQ = B*Q';
       X = A*BQ;
-      SBQ = SB*Q';
-      X_hat = AS * SBQ;
+      SBQ = SB(:,:,i)*Q';
+      X_hat = AS(:,:,i) * SBQ;
       y(j) = norm(X-X_hat, 'fro')^2;
     end
     z(i) = median(y);
   end
   [M,i] = min(z);
-  PA = AS(i);
-  PB = SB(i);
+  PA = AS(:,:,i);
+  PB = SB(:,:,i);
   return; 
 end
 

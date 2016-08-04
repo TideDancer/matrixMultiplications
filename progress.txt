@@ -1,0 +1,12 @@
+basicMatrixMult is done
+  overally good
+
+elementwise based mult is done
+  performance?
+  speed?
+
+random projection is tested:
+  fjlt and tug-of-war have bad performance
+  2014paper has good
+  2014paper is too slow as it need to compute svd, unless an approximation is added
+  need to go through the code and check again
