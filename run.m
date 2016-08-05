@@ -19,7 +19,7 @@ beta = 1;
 % C_approx = randomProjMult(A, B, 'kyrillidis2014approximate', [1e-3, 1e-3, 1e-6]); % kyrillidis2014 paper
 % C_approx = randomProjMult(A, B, 'FJLT', [1e-2, 1e-2, 1]);
 % 
-% C_approx = nystrom(A, B);
+C_approx = nystrom(A, B, round(dim/2));
 % 
 % C_approx = compressedSensing(A, B, [1, 1]);
 % 
@@ -27,7 +27,7 @@ beta = 1;
 % 
 % C_approx = frequencyCounting(A, B); % A, B need to be non-negative matrix !!!!!!!!!!
 
-C_approx = compressedFFT(A, B, nnzAB); % parameter default value is 20
+% C_approx = compressedFFT(A, B, nnzAB); % parameter default value is 20
 
 
 

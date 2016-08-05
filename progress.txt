@@ -13,3 +13,6 @@ random projection is tested:
 
 fft based tested and done:
   error too high, errnorm/ab_norm is around 5
+
+nystrom tested and done:
+  related to parameter k, it seems if k = n/100 is as good as n/10, can try log n to test

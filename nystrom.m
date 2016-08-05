@@ -1,10 +1,10 @@
 % input A m*n, B n*p
+% result: ||AB - CR|| <= sqrt((n-k) \sum_{i not in J}(||A_col||^2 ||B_row||^2) )
 
 
-function C_approx = nystrom(A, B);
+function C_approx = nystrom(A, B, k);
 
 [m,n] = size(A);
-k = round(log10(n));
 
 % ------------- multiplication routing -------------
 T = zeros(n,1);
