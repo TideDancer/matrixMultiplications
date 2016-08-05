@@ -1,9 +1,17 @@
-function C_approx = compressedFFT(A, B, parameterList);
+% product AB need to has at most b/8 nonzero entries
+% d >= 6 log n
+% then correctness probability is 1-o(1)
+
+function C_approx = compressedFFT(A, B, nnzAB);
 
 [r, n] = size(A);
-b = ceil(log10(n));
+b = nnzAB * 8;
+if b > n*n
+  'b > n*n'
+  return;
+end
 
-d = parameterList(1); % default value = 20;
+d = 6*log10(n);
 
 % --------------------- compressed product --------------
 s1_t = []; s2_t = []; h1_t = []; h2_t = []; p_t = [];
@@ -20,12 +28,10 @@ for t = 1:d
             pa(h1(i)) = pa(h1(i))+s1(i)*A(i,k);
         end
         for j = 1:n
-            pb(h2(j)) = pb(h2(j))+s2(j)*B(j,k);
+            pb(h2(j)) = pb(h2(j))+s2(j)*B(k,j); % original paper: pa(h2(j)) = pb(h2(j)) + s2(j)*B_kj
         end
         pa = fft(pa); pb = fft(pb);
-        for z = 1:b
-            p(z) = p(z)+pa(z)*pb(z);
-        end
+        p = p + pa.*pb;
     end
     
     s1_t = [s1_t; s1];
@@ -46,7 +52,7 @@ for i = 1:n
         for t = 1:d
             X(t) = s1_t(t,i)*s2_t(t,j)* p_t(t, 1+mod((h1_t(t,i)+h2_t(t,j)), b));
         end
-        C_approx(i,j) = mean(X);
+        C_approx(i,j) = median(X);
     end
 end
 

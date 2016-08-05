@@ -1,5 +1,6 @@
 % input A m*n, B n*p
 
+
 function C_approx = nystrom(A, B);
 
 [m,n] = size(A);

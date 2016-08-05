@@ -10,3 +10,6 @@ random projection is tested:
   2014paper has good
   2014paper is too slow as it need to compute svd, unless an approximation is added
   need to go through the code and check again
+
+fft based tested and done:
+  error too high, errnorm/ab_norm is around 5
