@@ -16,3 +16,9 @@ fft based tested and done:
 
 nystrom tested and done:
   related to parameter k, it seems if k = n/100 is as good as n/10, can try log n to test
+
+cs based tested and done:
+  very slow using l1magic
+  don't know how to use capital C and small c, because gamma is coresponding to some capital C
+  accuracy is good
+

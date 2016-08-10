@@ -19,15 +19,17 @@ beta = 1;
 % C_approx = randomProjMult(A, B, 'kyrillidis2014approximate', [1e-3, 1e-3, 1e-6]); % kyrillidis2014 paper
 % C_approx = randomProjMult(A, B, 'FJLT', [1e-2, 1e-2, 1]);
 % 
-C_approx = nystrom(A, B, round(dim/2));
-% 
-% C_approx = compressedSensing(A, B, [1, 1]);
+% C_approx = nystrom(A, B, round(log10(dim)));
+
+b = log(nnzAB)/log(dim) < 0.29462; % corollary 5 in the paper of cs-based mult
+[prob, gamma, c] = cGammaTest(C);  % c-gamma test to compute gamma for a specific C
+C_approx = compressedSensing(A, B, [1, min(gamma)]);
 % 
 % C_approx = equationSolve(A, B);
 % 
 % C_approx = frequencyCounting(A, B); % A, B need to be non-negative matrix !!!!!!!!!!
 
-% C_approx = compressedFFT(A, B, nnzAB); % parameter default value is 20
+% C_approx = compressedFFT(A, B, nnzAB);
 
 
 
