@@ -8,23 +8,28 @@ B = squareMatrixGen(dim, 'dense', 'normal');
 C = A*B;
 nnzAB = nnz(C);
 
-delta = 1e-1;
-epsilon = 1e-1;
+delta = 1/dim;  % failure probability
+epsilon = 1e-1; % error norm <= epsilon ||A|| ||B||
 beta = 1;
 
 % C_approx = basicMatrixMult(A, B, 'column2norm', [delta, epsilon, beta]); % coloum 2-norm based sampling
 % 
-% C_approx = elementMatrixMult(A, B, 'l2', 1); % l-2 based element-wise sampling
+% ------------------------ elementwise l2 ------------------------------------
+l = elementTest(A,B,epsilon); % default delta is 1/dim
+C_approx = elementMatrixMult(A, B, 'l2', l); % l-2 based element-wise sampling
+% ----------------------------------------------------------------------------
 % 
 % C_approx = randomProjMult(A, B, 'kyrillidis2014approximate', [1e-3, 1e-3, 1e-6]); % kyrillidis2014 paper
 % C_approx = randomProjMult(A, B, 'FJLT', [1e-2, 1e-2, 1]);
 % 
 % C_approx = nystrom(A, B, round(log10(dim)));
 
-b = log(nnzAB)/log(dim) < 0.29462; % corollary 5 in the paper of cs-based mult
-[prob, gamma, c] = cGammaTest(C);  % c-gamma test to compute gamma for a specific C
-C_approx = compressedSensing(A, B, [1, min(gamma)]);
-% 
+% ------------------------- cs based ---------------------------
+% b = log(nnzAB)/log(dim) < 0.29462; % corollary 5 in the paper of cs-based mult
+% [prob, gamma, c] = cGammaTest(C);  % c-gamma test to compute gamma for a specific C
+% C_approx = compressedSensing(A, B, [1, min(gamma)]);
+% -------------------------------------------------------------- 
+
 % C_approx = equationSolve(A, B);
 % 
 % C_approx = frequencyCounting(A, B); % A, B need to be non-negative matrix !!!!!!!!!!

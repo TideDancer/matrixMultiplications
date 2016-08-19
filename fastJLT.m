@@ -20,14 +20,11 @@ PA = D.*A;
 PA = fwht(PA, r, 'hadamard').*r;
 
 % compute PHDx, P is random generated matrix following certain distribution based on the 2009 Ailon paper
-q = (log10(c))^2/r;
-if q > 1
-  q = 1;
-end 
-P = rand(k, c);
+q = min(1, (log10(c))^2/r);
+P = rand(k, r);
 P = (P < q);
 P1 = sqrt(1/q) * randn(k, c);
-P = P.*P1;
+P = sparse(P.*P1);
 PA = P * PA;
 
 return;

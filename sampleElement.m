@@ -20,7 +20,7 @@ if strcmp(type, 'l2')
   A_F2 = A_F^2;
   for i = 1:m
     for j = 1:n
-      if abs(A(i,j)) > A_F*log10(2*n)^3
+      if abs(A(i,j)) > A_F*log10(2*n)^3 / sqrt(2*n*l)
         p(i,j) = min(1, l * A(i,j)^2 / A_F2);
       else
         p(i,j) = min(1, sqrt(l) * abs(A(i,j)) * log10(2*n)^3 / (sqrt(2*n) * A_F) ); 

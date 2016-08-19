@@ -1,15 +1,16 @@
 basicMatrixMult is done
   overally good
 
-elementwise based mult is done
-  performance?
-  speed?
+elementwise l2 mult is tested and done
+  parameter l is too small with normal or uniform matrix, which result in bad performance
+  because n/l is related to epsilon thus not satisfying epsilon
+  speed is fast
 
-random projection is tested:
-  fjlt and tug-of-war have bad performance
-  2014paper has good
-  2014paper is too slow as it need to compute svd, unless an approximation is added
-  need to go through the code and check again
+random projection is tested and done
+  fjlt tested and checked and done, bad performance, err/ab = 1e^4
+  tug-of-war have bad performance, err/ab = 10
+  2014paper has good performance, err/ab = 1e-3. 2014paper is too slow as it need to compute svd, unless an approximation is added
+  2009paper using sign matrix is overally good performance and speed. 
 
 fft based tested and done:
   error too high, errnorm/ab_norm is around 5
@@ -22,3 +23,6 @@ cs based tested and done:
   don't know how to use capital C and small c, because gamma is coresponding to some capital C
   accuracy is good
 
+linear equation tested and done:
+  speed and accuracy ok
+  therotically has problem, why n^2
