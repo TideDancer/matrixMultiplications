@@ -7,7 +7,8 @@ function C_approx = compressedFFT(A, B, nnzAB);
 [r, n] = size(A);
 b = nnzAB * 8;
 if b > n*n
-  'b > n*n'
+  disp('compressedFFT test fail: b > n*n');
+  C_approx = inf;
   return;
 end
 

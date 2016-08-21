@@ -37,7 +37,7 @@ if strcmp(type, 'kyrillidis2014approximate')
   t = const*((nra + nrb + log10(log10(1/epsilon)) + log10(1/delta)) / epsilon^2);
   t = round(t);
   if t>ca
-    't > n'
+    disp('kyrillidis2014approximate test fail: t > n');
   end
   G = randn(t,ca).*sqrt(1/t);  % assuming A,B has same size here
   PA = A*G'; PB = G*B;

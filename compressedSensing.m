@@ -13,11 +13,10 @@ m = round(log10(n));
 % build measurement matrix
 rows = round( (m+1/gamma) * 2^(const * log10(log10(n))^2) );
 if rows > r
-  'rows > r'
+  disp('rows > r');
+  C_approx = inf;
   return;
 end
-rows
-r
 M = randn(rows, n);
 
 % reconstruct

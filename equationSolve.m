@@ -35,9 +35,8 @@ end
 x = randn(n^2, 1); x_last = x.*10;
 e = 1e-3*norm(x,'fro'); step_limit = n; step = 1;
 while norm(x-x_last, 'fro') > e
-  step
   if step > step_limit
-    'step > n'
+    disp('step > n')
     break;
   end
   step = step + 1;
@@ -57,7 +56,6 @@ while norm(x-x_last, 'fro') > e
 
   alpha = r'*r / (r'*fr);
   x = x + alpha * r;
-  norm(x-x_last)
 end
 % need to be modified !!!!!!!!!!!!!!!!!!!!!!!
 % need sparse representation of V, x

@@ -12,22 +12,20 @@ end
 % ------------- compute l based on epsion -------------
 lmax = min(norm(A,'fro')^2/max(max(A.^2)), norm(B,'fro')^2/max(max(B.^2)));
 if lmax < 1
-  'elementTestFail: l < 1'
+  disp('elementTestFail: l < 1');
   return;
 end
 
 for l = lmax: -(lmax-1)/100 : 1
-  d = 20*sqrt(n/l) + 100*n/l;
-  if d > epsilon
+  eps = 20*sqrt(n/l) + 100*n/l;
+  if eps > epsilon
     break;
   end
 end
 l = l + (lmax-1)/100;
 
 if l > lmax
-  lmax
-  d
-  'elementTestFail: epsilon not satisfied in l valid range'
+  disp(strcat('elementTestFail: epsilon not satisfied in l valid range, best epsilon obtained is',num2str(eps)));
 end
 
 return;
