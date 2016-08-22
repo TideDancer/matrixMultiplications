@@ -1,0 +1,50 @@
+MATLAB is selecting SOFTWARE OPENGL rendering.
+
+                            < M A T L A B (R) >
+                  Copyright 1984-2015 The MathWorks, Inc.
+                   R2015a (8.5.0.197613) 64-bit (glnxa64)
+                             February 12, 2015
+
+ 
+To get started, type one of these: helpwin, helpdesk, or demo.
+For product information, visit www.mathworks.com.
+ 
+
+	Academic License
+
+>> Elapsed time is 0.476689 seconds.
+>> ------------------------------
+>> >> >> >> >> Elapsed time is 0.565579 seconds.
+>> errorRatio =0.043408
+>> ------------------------------
+>> >> >> >> elementTestFail: epsilon not satisfied in l valid range, best epsilon obtained is5.9287
+>> >> >> Elapsed time is 1.721522 seconds.
+>> errorRatio =0.15867
+>> ------------------------------
+>> >> >> >> >> >> Elapsed time is 0.489713 seconds.
+>> errorRatio =17892.4633
+>> ------------------------------
+>> >> >> >> >> >> Elapsed time is 1.074898 seconds.
+>> errorRatio =10.4679
+>> ------------------------------
+>> >> >> >> >> >> Elapsed time is 0.082054 seconds.
+>> errorRatio =0.057612
+>> ------------------------------
+>> >> >> >> >> kyrillidis2014approximate test fail: t > n
+>> Elapsed time is 0.241737 seconds.
+>> errorRatio =0.020834
+>> ------------------------------
+>> >> >> >> >> compressedFFT test fail: b > n*n
+>> Elapsed time is 0.022717 seconds.
+>> errorRatio =Inf
+>> ------------------------------
+>> >> >> >> >> >> >> >> Elapsed time is 4105.355848 seconds.
+>> errorRatio =0.034067
+>> ------------------------------
+>> >> >> >> >> >> Elapsed time is 14.538223 seconds.
+>> errorRatio =0.031212
+>> ------------------------------
+>> >> >> >> >> >> Elapsed time is 0.709510 seconds.
+>> errorRatio =0.031156
+>> ------------------------------
+>> >> >> >> >> >> >> >> >> >> >> >> 

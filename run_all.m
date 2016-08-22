@@ -1,12 +1,12 @@
 settings;
-disp('------------------------------');
+disp('--------------direct mult --------------');
 
 % ------------------------ column l2 sample -----------------------------------
 tic;
 C_approx = basicMatrixMult(A, B, 'column2norm', [delta, epsilon, beta]);
 toc; 
 disp(strcat('errorRatio = ', num2str(norm(C-C_approx, 'fro')/AB_norm)))
-disp('------------------------------');
+disp('-------------column 2 norm sampling-----------');
 
 
 % ------------------------ elementwise l2 ------------------------------------
@@ -15,7 +15,7 @@ tic;
 C_approx = elementMatrixMult(A, B, 'l2', l); % l-2 based element-wise sampling
 toc;
 disp(strcat('errorRatio = ', num2str(norm(C-C_approx, 'fro')/AB_norm)))
-disp('------------------------------');
+disp('-------------elementwise-------------');
 
 
 % ------------------------ fjlt ----------------------------------------
@@ -23,7 +23,7 @@ tic;
 C_approx = randomProjMult(A, B, 'FJLT', [delta, epsilon, const]);
 toc;
 disp(strcat('errorRatio = ', num2str(norm(C-C_approx, 'fro')/AB_norm)))
-disp('------------------------------');
+disp('--------------fjlt -----------');
 
 
 % ------------------------ tug-of-war ----------------------------------
@@ -31,7 +31,7 @@ tic;
 C_approx = randomProjMult(A, B, 'tug-of-war', [delta, epsilon, const]);
 toc;
 disp(strcat('errorRatio = ', num2str(norm(C-C_approx, 'fro')/AB_norm)))
-disp('------------------------------');
+disp('--------------tug-of-war-------------');
 
 
 % -------------------------- clarkson2009numerical -----------------------------
@@ -39,7 +39,7 @@ tic;
 C_approx = randomProjMult(A, B, 'clarkson2009numerical', [delta, epsilon, const]); 
 toc;
 disp(strcat('errorRatio = ', num2str(norm(C-C_approx, 'fro')/AB_norm)))
-disp('------------------------------');
+disp('------------clarkson2009numerical---------------');
 
 
 % ------------------------- kyrillidis2014approximate ---------------------------
@@ -47,7 +47,7 @@ tic;
 C_approx = randomProjMult(A, B, 'kyrillidis2014approximate', [delta, epsilon, const]);
 toc;
 disp(strcat('errorRatio = ', num2str(norm(C-C_approx, 'fro')/AB_norm)))
-disp('------------------------------');
+disp('--------------kyrillidis2014approximate--------------');
 
 
 % --------------------------- compressedFFT ---------------------------
@@ -55,7 +55,23 @@ tic;
 C_approx = compressedFFT(A, B, nnzAB);
 toc;
 disp(strcat('errorRatio = ', num2str(norm(C-C_approx, 'fro')/AB_norm)))
-disp('------------------------------');
+disp('--------------compressedFFT---------------');
+
+
+% --------------------------- equationSolve ---------------------------
+tic;
+C_approx = equationSolve(A, B);
+toc;
+disp(strcat('errorRatio = ', num2str(norm(C-C_approx, 'fro')/AB_norm)))
+disp('-------------equationSolve---------------');
+
+
+% -------------------------- nystrom --------------------------------------------
+tic;
+C_approx = nystrom(A, B, round(log10(dim)));
+toc;
+disp(strcat('errorRatio = ', num2str(norm(C-C_approx, 'fro')/AB_norm)))
+disp('--------------nystrom---------------');
 
 
 % ------------------------- cs based ---------------------------
@@ -65,23 +81,8 @@ tic;
 C_approx = compressedSensing(A, B, [1, min(gamma)]);
 toc;
 disp(strcat('errorRatio = ', num2str(norm(C-C_approx, 'fro')/AB_norm)))
-disp('------------------------------');
+disp('--------------compressed sensing---------------');
 
-
-% --------------------------- equationSolve ---------------------------
-tic;
-C_approx = equationSolve(A, B);
-toc;
-disp(strcat('errorRatio = ', num2str(norm(C-C_approx, 'fro')/AB_norm)))
-disp('------------------------------');
-
-
-% -------------------------- nystrom --------------------------------------------
-tic;
-C_approx = nystrom(A, B, round(log10(dim)));
-toc;
-disp(strcat('errorRatio = ', num2str(norm(C-C_approx, 'fro')/AB_norm)))
-disp('------------------------------');
 
 
 % % --------------------------- frequencyCounting -----------------------

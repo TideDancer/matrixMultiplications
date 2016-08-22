@@ -1,5 +1,5 @@
 % define dimension when run
-dim = 2^9;
+dim = 2^15;
 
 delta = 1/dim;  % failure probability
 epsilon = 1e-1; % error norm <= epsilon ||A|| ||B||
@@ -7,11 +7,11 @@ beta = 1;
 const = 1;
 
 density = 'dense';
-distribution = 'normal';
+distribution = 'uniform';
 matrix = 'squareMatrixGen';
 
-A = squareMatrixGen(dim, 'dense', 'normal');
-B = squareMatrixGen(dim, 'dense', 'normal');
+A = squareMatrixGen(dim, density, distribution);
+B = squareMatrixGen(dim, density, distribution);
 tic;
 C = A*B;
 toc;
