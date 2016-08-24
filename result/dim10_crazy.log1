@@ -1,0 +1,55 @@
+
+                            < M A T L A B (R) >
+                  Copyright 1984-2015 The MathWorks, Inc.
+                   R2015a (8.5.0.197613) 64-bit (glnxa64)
+                             February 12, 2015
+
+ 
+For online documentation, see http://www.mathworks.com/support
+For product information, visit www.mathworks.com.
+ 
+
+	Academic License
+
+>> 
+dim =
+
+        1024
+
+gallery(sampling,dim),gallery(chebspec,dim,1)
+-----------------regular mult ----------------------
+Elapsed time is 0.059757 seconds.
+>> >> >> -------------column 2 norm sampling-----------
+>> >> >> Elapsed time is 1.469390 seconds.
+>> errorRatio =0.12195
+>> >> >> >> -------------elementwise-------------
+>> elementTestFail: epsilon not satisfied in l valid range, best epsilon obtained is47740.6791
+>> >> >> Elapsed time is 4.506661 seconds.
+>> errorRatio =1.433
+>> >> >> >> --------------fjlt -----------
+>> >> >> Elapsed time is 2.179166 seconds.
+>> errorRatio =19568.7784
+>> >> >> >> --------------tug-of-war-------------
+>> >> >> Elapsed time is 1.847926 seconds.
+>> errorRatio =16.7138
+>> >> >> >> ------------clarkson2009numerical---------------
+>> >> >> Elapsed time is 0.292446 seconds.
+>> errorRatio =0.056342
+>> >> >> >> --------------kyrillidis2014approximate--------------
+>> >> kyrillidis2014approximate test fail: t > n
+>> Elapsed time is 0.787941 seconds.
+>> errorRatio =0.021662
+>> >> >> >> --------------compressedFFT---------------
+>> >> compressedFFT test fail: b > n*n
+>> Elapsed time is 0.016817 seconds.
+>> errorRatio =Inf
+>> >> >> >> -------------equationSolve---------------
+>> >> >> Elapsed time is 35.384882 seconds.
+>> errorRatio =0.12272
+>> >> >> >> --------------nystrom---------------
+>> >> >> Elapsed time is 0.655723 seconds.
+>> errorRatio =0.0166
+>> >> >> >> --------------compressed sensing---------------
+>> >> >> >> >> Elapsed time is 2529.669166 seconds.
+>> errorRatio =0.017083
+>> >> >> >> >> >> >> >> >> >> >> >> >> 

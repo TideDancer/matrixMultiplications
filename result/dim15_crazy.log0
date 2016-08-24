@@ -11,43 +11,49 @@ For product information, visit www.mathworks.com.
 
 	Academic License
 
->> Elapsed time is 1241.457983 seconds.
->> --------------direct mult --------------
->> >> >> >> >> Elapsed time is 122.230565 seconds.
->> errorRatio =0.029676
->> -------------column 2 norm sampling-----------
->> >> >> >> elementTestFail: epsilon not satisfied in l valid range, best epsilon obtained is0.20053
->> >> >> Elapsed time is 54620.220540 seconds.
->> errorRatio =0.011596
->> -------------elementwise-------------
->> >> >> >> >> >> Elapsed time is 5035.150783 seconds.
->> errorRatio =705760.0076
->> --------------fjlt -----------
->> >> >> >> >> >> Elapsed time is 240.473311 seconds.
->> errorRatio =64.7886
->> --------------tug-of-war-------------
->> >> >> >> >> >> Elapsed time is 35.983887 seconds.
->> errorRatio =0.036067
->> ------------clarkson2009numerical---------------
->> >> >> >> >> >> Elapsed time is 223.707028 seconds.
->> errorRatio =0.012446
->> --------------kyrillidis2014approximate--------------
->> >> >> >> >> compressedFFT test fail: b > n*n
->> Elapsed time is 0.124198 seconds.
+>> 
+dim =
+
+       32768
+
+gallery(sampling,dim),gallery(chebspec,dim,1)
+-----------------regular mult ----------------------
+Elapsed time is 1049.716594 seconds.
+>> >> >> -------------column 2 norm sampling-----------
+>> >> >> Elapsed time is 194.419489 seconds.
+>> errorRatio =0.032869
+>> >> >> >> -------------elementwise-------------
+>> elementTestFail: epsilon not satisfied in l valid range, best epsilon obtained is1516241.4041
+>> >> >> Elapsed time is 4118.036276 seconds.
+>> errorRatio =3.4113
+>> >> >> >> --------------fjlt -----------
+>> >> >> Elapsed time is 4441.378947 seconds.
+>> errorRatio =698236.2851
+>> >> >> >> --------------tug-of-war-------------
+>> >> >> Elapsed time is 187.041239 seconds.
+>> errorRatio =10.6868
+>> >> >> >> ------------clarkson2009numerical---------------
+>> >> >> Elapsed time is 23.407797 seconds.
+>> errorRatio =0.047207
+>> >> >> >> --------------kyrillidis2014approximate--------------
+>> >> >> Elapsed time is 151.487005 seconds.
+>> errorRatio =0.017114
+>> >> >> >> --------------compressedFFT---------------
+>> >> compressedFFT test fail: b > n*n
+>> Elapsed time is 0.112518 seconds.
 >> errorRatio =Inf
->> --------------compressedFFT---------------
->> >> >> >> >> >> MATLAB has lost its connection to the license server.
+>> >> >> >> -------------equationSolve---------------
+>> >> >> MATLAB has lost its connection to the license server.
 MATLAB will make 9 more reconnection attempt(s) and then exit. Any unsaved changes will be lost.
 
-Elapsed time is 93855.231440 seconds.
+Elapsed time is 94743.086527 seconds.
 >> MATLAB has lost its connection to the license server.
 MATLAB will make 8 more reconnection attempt(s) and then exit. Any unsaved changes will be lost.
 
-errorRatio =0.74995
+errorRatio =0.033022
 >> MATLAB has lost its connection to the license server.
 MATLAB will make 7 more reconnection attempt(s) and then exit. Any unsaved changes will be lost.
 
--------------equationSolve---------------
 >> MATLAB has lost its connection to the license server.
 MATLAB will make 6 more reconnection attempt(s) and then exit. Any unsaved changes will be lost.
 
@@ -57,6 +63,7 @@ MATLAB will make 5 more reconnection attempt(s) and then exit. Any unsaved chang
 >> MATLAB has lost its connection to the license server.
 MATLAB will make 4 more reconnection attempt(s) and then exit. Any unsaved changes will be lost.
 
+--------------nystrom---------------
 >> MATLAB has lost its connection to the license server.
 MATLAB will make 3 more reconnection attempt(s) and then exit. Any unsaved changes will be lost.
 
@@ -66,14 +73,10 @@ MATLAB will make 2 more reconnection attempt(s) and then exit. Any unsaved chang
 >> MATLAB has lost its connection to the license server.
 MATLAB will make 1 more reconnection attempt(s) and then exit. Any unsaved changes will be lost.
 
-Elapsed time is 1061.523591 seconds.
+Elapsed time is 2009.336219 seconds.
 >> MATLAB lost its connection to the license server.
 MATLAB will exit in 15 minutes. Any unsaved changes will be lost.
 
-errorRatio =0.27289
->> --------------nystrom---------------
->> >> >> >> >> >> >> rows > r
->> Elapsed time is 0.063920 seconds.
->> errorRatio =Inf
->> --------------compressed sensing---------------
->> >> >> >> >> >> >> >> >> >> >> >> >> 
+errorRatio =0.0036397
+>> >> >> >> --------------compressed sensing---------------
+>> >> >> >> 

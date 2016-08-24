@@ -11,4 +11,69 @@ For product information, visit www.mathworks.com.
 
 	Academic License
 
->> 
+>> Elapsed time is 1230.624117 seconds.
+>> --------------direct mult --------------
+>> >> >> >> >> Elapsed time is 102.063504 seconds.
+>> errorRatio =0.029676
+>> -------------column 2 norm sampling-----------
+>> >> >> >> elementTestFail: epsilon not satisfied in l valid range, best epsilon obtained is0.20053
+>> >> >> Elapsed time is 58471.514943 seconds.
+>> errorRatio =0.011596
+>> -------------elementwise-------------
+>> >> >> >> >> >> Elapsed time is 8408.783188 seconds.
+>> errorRatio =705760.0076
+>> --------------fjlt -----------
+>> >> >> >> >> >> Elapsed time is 285.596528 seconds.
+>> errorRatio =64.7886
+>> --------------tug-of-war-------------
+>> >> >> >> >> >> Elapsed time is 46.506809 seconds.
+>> errorRatio =0.036067
+>> ------------clarkson2009numerical---------------
+>> >> >> >> >> >> Elapsed time is 297.803300 seconds.
+>> errorRatio =0.012446
+>> --------------kyrillidis2014approximate--------------
+>> >> >> >> >> compressedFFT test fail: b > n*n
+>> Elapsed time is 0.170968 seconds.
+>> errorRatio =Inf
+>> --------------compressedFFT---------------
+>> >> >> >> >> >> MATLAB has lost its connection to the license server.
+MATLAB will make 9 more reconnection attempt(s) and then exit. Any unsaved changes will be lost.
+
+Elapsed time is 88319.773626 seconds.
+>> MATLAB has lost its connection to the license server.
+MATLAB will make 8 more reconnection attempt(s) and then exit. Any unsaved changes will be lost.
+
+errorRatio =0.74995
+>> MATLAB has lost its connection to the license server.
+MATLAB will make 7 more reconnection attempt(s) and then exit. Any unsaved changes will be lost.
+
+-------------equationSolve---------------
+>> MATLAB has lost its connection to the license server.
+MATLAB will make 6 more reconnection attempt(s) and then exit. Any unsaved changes will be lost.
+
+>> MATLAB has lost its connection to the license server.
+MATLAB will make 5 more reconnection attempt(s) and then exit. Any unsaved changes will be lost.
+
+>> MATLAB has lost its connection to the license server.
+MATLAB will make 4 more reconnection attempt(s) and then exit. Any unsaved changes will be lost.
+
+>> MATLAB has lost its connection to the license server.
+MATLAB will make 3 more reconnection attempt(s) and then exit. Any unsaved changes will be lost.
+
+>> MATLAB has lost its connection to the license server.
+MATLAB will make 2 more reconnection attempt(s) and then exit. Any unsaved changes will be lost.
+
+>> MATLAB has lost its connection to the license server.
+MATLAB will make 1 more reconnection attempt(s) and then exit. Any unsaved changes will be lost.
+
+Elapsed time is 1066.451260 seconds.
+>> MATLAB lost its connection to the license server.
+MATLAB will exit in 15 minutes. Any unsaved changes will be lost.
+
+errorRatio =0.27289
+>> --------------nystrom---------------
+>> >> >> >> >> >> >> rows > r
+>> Elapsed time is 0.049391 seconds.
+>> errorRatio =Inf
+>> --------------compressed sensing---------------
+>> >> >> >> >> >> >> >> >> >> >> >> >> 

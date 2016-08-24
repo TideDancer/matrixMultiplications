@@ -20,4 +20,26 @@ For product information, visit www.mathworks.com.
 >> >> >> Elapsed time is 87.946782 seconds.
 >> errorRatio =0.093453
 >> -------------elementwise-------------
->> >> >> >> >> 
+>> >> >> >> >> >> Elapsed time is 64.626444 seconds.
+>> errorRatio =162413.0991
+>> --------------fjlt -----------
+>> >> >> >> >> >> Elapsed time is 10.900704 seconds.
+>> errorRatio =10.0319
+>> --------------tug-of-war-------------
+>> >> >> >> >> >> Elapsed time is 2.642390 seconds.
+>> errorRatio =0.050613
+>> ------------clarkson2009numerical---------------
+>> >> >> >> >> >> Elapsed time is 15.301909 seconds.
+>> errorRatio =0.018278
+>> --------------kyrillidis2014approximate--------------
+>> >> >> >> >> compressedFFT test fail: b > n*n
+>> Elapsed time is 0.032945 seconds.
+>> errorRatio =Inf
+>> --------------compressedFFT---------------
+>> >> >> >> >> >> Elapsed time is 1509.929072 seconds.
+>> errorRatio =0.011049
+>> -------------equationSolve---------------
+>> >> >> >> >> >> Elapsed time is 23.068468 seconds.
+>> errorRatio =0.011046
+>> --------------nystrom---------------
+>> >> >> >> >> >> >> 
