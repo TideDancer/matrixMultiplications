@@ -1,5 +1,4 @@
 % define dimension when run
-dim = 2^15
 
 delta = 1/dim;  % failure probability
 epsilon = 1e-1; % error norm <= epsilon ||A|| ||B||
