@@ -8,24 +8,24 @@
 To get started, type one of these: helpwin, helpdesk, or demo.
 For product information, visit www.mathworks.com.
  
-gallery(sampling,dim),gallery(chebspec,dim,1)
 -----------------regular mult ----------------------
-Elapsed time is 50.266419 seconds.
+Elapsed time is 0.401949 seconds.
 -------------column 2 norm sampling-----------
-Elapsed time is 7.196029 seconds.
-errorRatio =0.056632
+Elapsed time is 0.495606 seconds.
+errorRatio =0.029202
 -------------elementwise-------------
-elementTestFail: epsilon not satisfied in l valid range, best epsilon obtained is379675.5324
-Elapsed time is 84.446428 seconds.
-errorRatio =2.3279
+elementTestFail: epsilon not satisfied in l valid range, best epsilon obtained is1.3751
+Elapsed time is 1.576460 seconds.
+errorRatio =0.045782
 --------------fjlt -----------
-Elapsed time is 73.097370 seconds.
-errorRatio =166225.4865
+Elapsed time is 0.693466 seconds.
+errorRatio =18482.2268
 --------------tug-of-war-------------
-Elapsed time is 26.264722 seconds.
-errorRatio =11.2984
+Elapsed time is 0.325381 seconds.
+errorRatio =56.2681
 ------------clarkson2009numerical---------------
-Elapsed time is 7.779611 seconds.
-errorRatio =0.05096
+Elapsed time is 0.120217 seconds.
+errorRatio =0.049018
 --------------kyrillidis2014approximate--------------
-Elapsed time is 56.116600 seconds.
+kyrillidis2014approximate test fail: t > n
+Elapsed time is 0.341567 seconds.

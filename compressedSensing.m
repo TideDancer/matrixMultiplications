@@ -8,6 +8,7 @@ function C_approx = compressedSensing(A, B, parameterList);
 % C-gamma compressible
 const = parameterList(1); % default = 1;
 gamma = parameterList(2); % default = 1; c-gamma compressible, check definition
+epsilon = parameterList(3);
 m = round(log10(n));
 
 % build measurement matrix
@@ -29,9 +30,6 @@ M = orth(M')'; % orthogonalize matrix according to examples in l1magic, a transp
 
 % observations
 P = (M*A)*B;
-
-% errorbound
-epsilon = 1e-3;
 
 % solve the LP
 C_approx = [];

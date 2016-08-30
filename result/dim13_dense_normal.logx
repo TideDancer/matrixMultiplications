@@ -8,11 +8,13 @@
 To get started, type one of these: helpwin, helpdesk, or demo.
 For product information, visit www.mathworks.com.
  
-gallery(sampling,dim),gallery(chebspec,dim,1)
 -----------------regular mult ----------------------
-Elapsed time is 399.556093 seconds.
+Elapsed time is 50.005873 seconds.
 -------------column 2 norm sampling-----------
-Elapsed time is 24.185433 seconds.
-errorRatio =0.043258
+Elapsed time is 7.218435 seconds.
+errorRatio =0.046656
 -------------elementwise-------------
-elementTestFail: epsilon not satisfied in l valid range, best epsilon obtained is758630.3325
+elementTestFail: epsilon not satisfied in l valid range, best epsilon obtained is1.8665
+Elapsed time is 100.621450 seconds.
+errorRatio =0.093453
+--------------fjlt -----------

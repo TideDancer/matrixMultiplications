@@ -10,38 +10,23 @@ For product information, visit www.mathworks.com.
  
 gallery(sampling,dim),gallery(chebspec,dim,1)
 -----------------regular mult ----------------------
-Elapsed time is 0.140991 seconds.
+Elapsed time is 0.120237 seconds.
 -------------column 2 norm sampling-----------
-Elapsed time is 0.647675 seconds.
+Elapsed time is 0.449644 seconds.
 errorRatio =0.12195
 -------------elementwise-------------
 elementTestFail: epsilon not satisfied in l valid range, best epsilon obtained is47740.6791
-Elapsed time is 1.113247 seconds.
+Elapsed time is 1.110956 seconds.
 errorRatio =1.433
 --------------fjlt -----------
-Elapsed time is 0.801605 seconds.
+Elapsed time is 0.792204 seconds.
 errorRatio =19568.7784
 --------------tug-of-war-------------
-Elapsed time is 0.317622 seconds.
+Elapsed time is 0.338195 seconds.
 errorRatio =16.7138
 ------------clarkson2009numerical---------------
-Elapsed time is 0.183526 seconds.
+Elapsed time is 0.173031 seconds.
 errorRatio =0.056342
 --------------kyrillidis2014approximate--------------
 kyrillidis2014approximate test fail: t > n
-Elapsed time is 0.778224 seconds.
-errorRatio =0.021662
---------------compressedFFT---------------
-compressedFFT test fail: b > n*n
-Elapsed time is 0.047635 seconds.
-errorRatio =Inf
--------------equationSolve---------------
-Elapsed time is 3.172018 seconds.
-errorRatio =0.12272
---------------nystrom---------------
-Elapsed time is 0.356842 seconds.
-errorRatio =0.0166
---------------compressed sensing---------------
-Elapsed time is 107.055524 seconds.
-errorRatio =0.017102
->> 
+Elapsed time is 0.371524 seconds.

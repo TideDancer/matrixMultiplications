@@ -8,3 +8,10 @@
 To get started, type one of these: helpwin, helpdesk, or demo.
 For product information, visit www.mathworks.com.
  
+-----------------regular mult ----------------------
+Elapsed time is 50.311267 seconds.
+-------------column 2 norm sampling-----------
+Elapsed time is 8.167298 seconds.
+errorRatio =0.031046
+-------------elementwise-------------
+elementTestFail: epsilon not satisfied in l valid range, best epsilon obtained is0.4194
