@@ -10,7 +10,7 @@ For product information, visit www.mathworks.com.
  
 gallery(sampling,dim),gallery(chebspec,dim,1)
 -----------------regular mult ----------------------
-Elapsed time is 48.799229 seconds.
---------------compressed sensing---------------Elapsed time is 50.337665 seconds.
-errorRatio =0.030672
+Elapsed time is 3136.346289 seconds.
+--------------compressed sensing---------------Elapsed time is 4692.817213 seconds.
+errorRatio =0.014542
 >> 
