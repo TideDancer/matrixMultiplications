@@ -24,6 +24,7 @@ M = randn(rows, n);
 % need to invoke l1-magic package (compressed sensing reconstruction package written in matlab) and use l1eq_pd() function
 % refer to l1-magic package user mannual
 addpath 'l1magic/l1magic/Optimization/';
+addpath 'YALL1_v1.4';
 
 % following is from l1magic examples except the observation building P
 M = orth(M')'; % orthogonalize matrix according to examples in l1magic, a transpose at the end ensure dimension match
@@ -34,9 +35,17 @@ P = (M*A)*B;
 % solve the LP
 C_approx = [];
 for i = 1:n
-  % initial guess = min energy
-  x0 = M'*P(:,i);
-	xp = l1eq_pd(x0, M, [], P(:,i), epsilon);
+  % ------------ l1 magic ---------
+  % % initial guess = min energy
+  % x0 = M'*P(:,i);
+	% xp = l1eq_pd(x0, M, [], P(:,i), epsilon);
+  % -------------------------------
+  
+  % ------------ yall1 ------------
+  opt.tol = epsilon;
+  [xp,Out] = yall1(M, P(:,i), opt);
+  % -------------------------------
+
   C_approx = [C_approx, xp];
 end
 

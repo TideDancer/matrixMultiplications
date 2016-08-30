@@ -18,3 +18,13 @@ elementTestFail: epsilon not satisfied in l valid range, best epsilon obtained i
 Elapsed time is 100.621450 seconds.
 errorRatio =0.093453
 --------------fjlt -----------
+Elapsed time is 72.274820 seconds.
+errorRatio =162413.0991
+--------------tug-of-war-------------
+Elapsed time is 26.658289 seconds.
+errorRatio =10.0319
+------------clarkson2009numerical---------------
+Elapsed time is 7.814963 seconds.
+errorRatio =0.050613
+--------------kyrillidis2014approximate--------------
+Elapsed time is 56.082299 seconds.

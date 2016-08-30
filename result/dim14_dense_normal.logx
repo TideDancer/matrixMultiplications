@@ -8,3 +8,23 @@
 To get started, type one of these: helpwin, helpdesk, or demo.
 For product information, visit www.mathworks.com.
  
+-----------------regular mult ----------------------
+Elapsed time is 399.850080 seconds.
+-------------column 2 norm sampling-----------
+Elapsed time is 24.599505 seconds.
+errorRatio =0.045812
+-------------elementwise-------------
+elementTestFail: epsilon not satisfied in l valid range, best epsilon obtained is1.2203
+Elapsed time is 439.570692 seconds.
+errorRatio =0.076075
+--------------fjlt -----------
+Elapsed time is 316.432700 seconds.
+errorRatio =333273.8524
+--------------tug-of-war-------------
+Elapsed time is 104.909173 seconds.
+errorRatio =10.0267
+------------clarkson2009numerical---------------
+Elapsed time is 32.721482 seconds.
+errorRatio =0.048706
+--------------kyrillidis2014approximate--------------
+Elapsed time is 237.838060 seconds.

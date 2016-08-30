@@ -29,3 +29,18 @@ errorRatio =0.057612
 --------------kyrillidis2014approximate--------------
 kyrillidis2014approximate test fail: t > n
 Elapsed time is 0.343032 seconds.
+errorRatio =0.031207
+--------------compressedFFT---------------
+compressedFFT test fail: b > n*n
+Elapsed time is 0.040383 seconds.
+errorRatio =Inf
+-------------equationSolve---------------
+Elapsed time is 2.153895 seconds.
+errorRatio =0.031212
+--------------nystrom---------------
+Elapsed time is 0.362667 seconds.
+errorRatio =0.031156
+--------------compressed sensing---------------
+Elapsed time is 913.928616 seconds.
+errorRatio =0.034086
+>> 

@@ -8,3 +8,40 @@
 To get started, type one of these: helpwin, helpdesk, or demo.
 For product information, visit www.mathworks.com.
  
+gallery(randsvd, dim ,cond_num, 3)
+-----------------regular mult ----------------------
+Elapsed time is 0.926375 seconds.
+-------------column 2 norm sampling-----------
+Elapsed time is 1.251151 seconds.
+errorRatio =0.046089
+-------------elementwise-------------
+elementTestFail: epsilon not satisfied in l valid range, best epsilon obtained is4.0554
+Elapsed time is 7.008214 seconds.
+errorRatio =0.13281
+--------------fjlt -----------
+Elapsed time is 4.841961 seconds.
+errorRatio =38062.2491
+--------------tug-of-war-------------
+Elapsed time is 1.265168 seconds.
+errorRatio =10.1934
+------------clarkson2009numerical---------------
+Elapsed time is 0.476986 seconds.
+errorRatio =0.054937
+--------------kyrillidis2014approximate--------------
+kyrillidis2014approximate test fail: t > n
+Elapsed time is 2.891748 seconds.
+errorRatio =0.02196
+--------------compressedFFT---------------
+compressedFFT test fail: b > n*n
+Elapsed time is 0.010622 seconds.
+errorRatio =Inf
+-------------equationSolve---------------
+Elapsed time is 34.051626 seconds.
+errorRatio =22.9087
+--------------nystrom---------------
+Elapsed time is 0.701935 seconds.
+errorRatio =0.022082
+--------------compressed sensing---------------
+Elapsed time is 2092.480089 seconds.
+errorRatio =0.023116
+>> 
