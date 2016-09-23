@@ -70,11 +70,11 @@ elseif strcmp(type, 'l1')
   % compute s
   nrd = sum(z)/af^2;
   s = nrd * sr / epsilon^2 * log10(n/delta) + sqrt(sr * nd / epsilon^2 * log10(n/delta));
-  s = round(s);
   
   alpha = sqrt(log10(m+n)/delta/s);
   beta = log10((m+n)/delta)/(3*s);
-  
+  s = round(s);
+
   % use binary search because sum(rho) are strictly decreasing order w.r.t. mid
   precision = 1e-2;
   % set left to make sure sum > 1, then binary search to find right boundary
@@ -106,7 +106,7 @@ elseif strcmp(type, 'l1')
   for i = 1:m
     for j = 1:n
       if z(i) == 0
-        pdf((i-1)*n+j) = 0;       
+        pdf((i-1)*n+j) = 0; 
       else
         pdf((i-1)*n+j) = rho(i)*abs(A(i,j)/z(i));
       end

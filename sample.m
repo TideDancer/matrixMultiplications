@@ -4,7 +4,7 @@
 % pdf return probability density of each elements
 % cdf return cummulative density
 
-function [pdf, cdf, valueList] = sample(A, B, type, parameterList);
+function [pdf, cdf] = sample(A, B, type, parameterList);
 
 [ra, ca] = size(A);
 [rb, cb] = size(B);
@@ -12,7 +12,7 @@ function [pdf, cdf, valueList] = sample(A, B, type, parameterList);
 % type == 'column2norm', return p(i) = beta * A_k_column_2norm * B_k_row_2norm / sum_j(A_j_column_2norm * B_j_row_2norm)
 % here set beta to be 1
 if strcmp(type, 'column2norm')
-  beta = 1;
+  beta = parameterList;
   p = zeros(1, ca);
   p_sum = 0;
   if ca ~= rb
@@ -22,7 +22,6 @@ if strcmp(type, 'column2norm')
     p(i) = beta * norm(A(:,i)) * norm(B(i,:));
     p_sum = p_sum + p(i);
   end
-  valueList = beta;
 end
 
 

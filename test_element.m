@@ -35,10 +35,8 @@ for i = range
   error_1 = C - C_approx_l1;
   A_norm = [A_norm; norm(A, 'fro')];
   B_norm = [B_norm; norm(B, 'fro')];
-  C_norm = [C_norm; norm(C, 'fro')];
-  error2_norm = [error2_norm; norm(error_2, 'fro')];
-  error1_norm = [error1_norm; norm(error_1, 'fro')];
+  C_norm = [C_norm; norm(C, 'fro')]
+  norm(error_2, 'fro')/(A_norm*B_norm)
+  norm(error_1, 'fro')/(A_norm*B_norm)
 end
-
-save('result_element_dense_normal.mat', range, A_norm, B_norm, C_norm, error1_norm, error2_norm);
 
