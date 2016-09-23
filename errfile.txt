@@ -1,0 +1,85 @@
+srun: error: Could not find executable matlab
+srun: error: Could not find executable matlab
+srun: error: Could not find executable matlab
+srun: error: Could not find executable matlab
+srun: error: Could not find executable matlab
+srun: error: Could not find executable matlab
+0: slurmstepd: execve(): matlab: No such file or directory
+1: slurmstepd: execve(): matlab: No such file or directory
+2: slurmstepd: execve(): matlab: No such file or directory
+3: slurmstepd: execve(): matlab: No such file or directory
+4: slurmstepd: execve(): matlab: No such file or directory
+5: slurmstepd: execve(): matlab: No such file or directory
+srun: error: cn152: tasks 0-5: Exited with exit code 2
+srun: Terminating job step 331294.0
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+slurmstepd: *** JOB 331295 ON cn152 CANCELLED AT 2016-08-25T12:47:20 DUE TO TIME LIMIT ***
+0: slurmstepd: *** STEP 331295.0 ON cn152 CANCELLED AT 2016-08-25T12:47:20 DUE TO TIME LIMIT ***
+0: {Output argument "C_approx" (and maybe others) not assigned during call to
+0: "basicMatrixMult".
+0: 
+0: Error in run_all (line 6)
+0: C_approx = basicMatrixMult(A, B, 'column2norm', [delta, epsilon, beta]);
+0: } 
+1: {Output argument "C_approx" (and maybe others) not assigned during call to
+1: "basicMatrixMult".
+1: 
+1: Error in run_all (line 6)
+1: C_approx = basicMatrixMult(A, B, 'column2norm', [delta, epsilon, beta]);
+1: } 
+4: {Out of memory. Type HELP MEMORY for your options.
+4: 
+4: Error in project (line 43)
+4:   PA = A*G'; PB = G*B;
+4: 
+4: Error in randomProjMult (line 11)
+4: [PA, PB] = project(A, B, type, parameterList);
+4: 
+4: Error in run_all (line 47)
+4: C_approx = randomProjMult(A, B, 'kyrillidis2014approximate', [delta, epsilon,
+4: const]);
+4: } 
+5: {Error using randn
+5: Out of memory. Type HELP MEMORY for your options.
+5: 
+5: Error in project (line 42)
+5:   G = randn(t,ca).*sqrt(1/t);  % assuming A,B has same size here
+5: 
+5: Error in randomProjMult (line 11)
+5: [PA, PB] = project(A, B, type, parameterList);
+5: 
+5: Error in run_all (line 47)
+5: C_approx = randomProjMult(A, B, 'kyrillidis2014approximate', [delta, epsilon,
+5: const]);
+5: } 
+0: slurmstepd: *** STEP 332470.0 ON cn186 CANCELLED AT 2016-08-26T06:19:39 DUE TO TIME LIMIT ***
+slurmstepd: *** JOB 332470 ON cn186 CANCELLED AT 2016-08-26T06:19:39 DUE TO TIME LIMIT ***
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+slurmstepd: *** JOB 336894 ON cn229 CANCELLED AT 2016-08-30T10:18:56 DUE TO TIME LIMIT ***
+0: slurmstepd: *** STEP 336894.0 ON cn229 CANCELLED AT 2016-08-30T10:18:56 DUE TO TIME LIMIT ***
+0: srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+slurmstepd: *** JOB 336895 ON cn135 CANCELLED AT 2016-08-30T10:22:26 DUE TO TIME LIMIT ***
+slurmstepd: *** STEP 336895.0 ON cn135 CANCELLED AT 2016-08-30T10:22:26 DUE TO TIME LIMIT ***
+slurmstepd: *** JOB 336896 ON cn145 CANCELLED AT 2016-08-30T10:23:56 DUE TO TIME LIMIT ***
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+0: slurmstepd: *** STEP 336896.0 ON cn145 CANCELLED AT 2016-08-30T10:23:56 DUE TO TIME LIMIT ***
+slurmstepd: *** JOB 336897 ON cn147 CANCELLED AT 2016-08-30T10:26:26 DUE TO TIME LIMIT ***
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+0: slurmstepd: *** STEP 336897.0 ON cn147 CANCELLED AT 2016-08-30T10:26:26 DUE TO TIME LIMIT ***
+0: srun: error: Could not find executable matlab
+slurmstepd: execve(): matlab: No such file or directory
+srun: error: Could not find executable matlab
+srun: error: Could not find executable matlab
+srun: error: Could not find executable matlab
+srun: error: Could not find executable matlab
+srun: error: Could not find executable matlab
+1: slurmstepd: execve(): matlab: No such file or directory
+2: slurmstepd: execve(): matlab: No such file or directory
+3: slurmstepd: execve(): matlab: No such file or directory
+4: slurmstepd: execve(): matlab: No such file or directory
+5: slurmstepd: execve(): matlab: No such file or directory
+srun: error: cn132: tasks 0-3: Exited with exit code 2
+srun: Terminating job step 337520.0
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+srun: error: cn133: tasks 4-5: Exited with exit code 2

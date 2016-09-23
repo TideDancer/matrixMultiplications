@@ -38,6 +38,7 @@ if strcmp(type, 'kyrillidis2014approximate')
   t = round(t);
   if t>ca
     disp('kyrillidis2014approximate test fail: t > n');
+    t = ca;
   end
   G = randn(t,ca).*sqrt(1/t);  % assuming A,B has same size here
   PA = A*G'; PB = G*B;

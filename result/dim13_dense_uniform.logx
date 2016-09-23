@@ -1,0 +1,30 @@
+
+                            < M A T L A B (R) >
+                  Copyright 1984-2012 The MathWorks, Inc.
+                    R2012b (8.0.0.783) 64-bit (glnxa64)
+                              August 22, 2012
+
+ 
+To get started, type one of these: helpwin, helpdesk, or demo.
+For product information, visit www.mathworks.com.
+ 
+-----------------regular mult ----------------------
+Elapsed time is 50.311267 seconds.
+-------------column 2 norm sampling-----------
+Elapsed time is 8.167298 seconds.
+errorRatio =0.031046
+-------------elementwise-------------
+elementTestFail: epsilon not satisfied in l valid range, best epsilon obtained is0.4194
+Elapsed time is 256.695432 seconds.
+errorRatio =0.020463
+--------------fjlt -----------
+Elapsed time is 94.694806 seconds.
+errorRatio =159283.708
+--------------tug-of-war-------------
+Elapsed time is 26.289805 seconds.
+errorRatio =55.6774
+------------clarkson2009numerical---------------
+Elapsed time is 7.776574 seconds.
+errorRatio =0.034623
+--------------kyrillidis2014approximate--------------
+Elapsed time is 56.328269 seconds.

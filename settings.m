@@ -1,5 +1,4 @@
 % define dimension when run
-dim = 2^15
 
 delta = 1/dim;  % failure probability
 epsilon = 1e-1; % error norm <= epsilon ||A|| ||B||
@@ -7,7 +6,7 @@ beta = 1;
 const = 1;
 
 density = 'dense';
-distribution = 'uniform';
+distribution = 'normal';
 matrix = 'high condition';
 cond_num = 10^5;
 
@@ -16,14 +15,14 @@ cond_num = 10^5;
 % B = gallery('randsvd', dim ,cond_num, 3);
 % disp('gallery(randsvd, dim ,cond_num, 3)');
 
-% ------- square matrix ------
-%A = squareMatrixGen(dim, density, distribution);
-%B = squareMatrixGen(dim, density, distribution);
+% % ------- square matrix ------
+% A = squareMatrixGen(dim, density, distribution);
+% B = squareMatrixGen(dim, density, distribution);
 
 % ------- crazy matrix --------
-A = gallery('sampling', dim);
-B = gallery('chebspec',dim,1);
-disp('gallery(sampling,dim),gallery(chebspec,dim,1)');
+ A = gallery('sampling', dim);
+ B = gallery('chebspec',dim,1);
+ disp('gallery(sampling,dim),gallery(chebspec,dim,1)');
 
 % -------------------------- regular -------------------------------------
 disp('-----------------regular mult ----------------------');

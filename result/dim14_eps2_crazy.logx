@@ -1,0 +1,35 @@
+
+                            < M A T L A B (R) >
+                  Copyright 1984-2016 The MathWorks, Inc.
+                   R2016a (9.0.0.341360) 64-bit (glnxa64)
+                             February 11, 2016
+
+ 
+For online documentation, see http://www.mathworks.com/support
+For product information, visit www.mathworks.com.
+ 
+
+	Academic License
+
+gallery(sampling,dim),gallery(chebspec,dim,1)
+-----------------regular mult ----------------------
+Elapsed time is 201.174005 seconds.
+-------------column 2 norm sampling-----------
+Elapsed time is 644.702416 seconds.
+errorRatio =0.04344
+-------------elementwise-------------
+elementTestFail: epsilon not satisfied in l valid range, best epsilon obtained is758630.3325
+Elapsed time is 367.685612 seconds.
+errorRatio =0.043473
+--------------fjlt -----------
+Elapsed time is 1135.657306 seconds.
+errorRatio =3363166.2728
+--------------tug-of-war-------------
+Elapsed time is 1238.691174 seconds.
+errorRatio =447.546
+------------clarkson2009numerical---------------
+Elapsed time is 1573.813037 seconds.
+errorRatio =0.0048132
+--------------kyrillidis2014approximate--------------
+kyrillidis2014approximate test fail: t > n
+>> 
