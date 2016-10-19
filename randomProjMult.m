@@ -4,6 +4,7 @@
 
 function C_approx = randomProjMult(A, B, type, parameterList);
 
+delta = parameterList(1);
 const = parameterList(3);
 sampleSize = parameterList(4);
 

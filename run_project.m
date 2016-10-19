@@ -67,28 +67,28 @@ for k = 1:5
     toc;
     error = C - C_approx;
     error_norm = norm(error, 'fro');
-    disp(error1_norm/AB_norm);
+    disp(error_norm/AB_norm);
 
     tic;
     C_approx = randomProjMult(A, B, 'tug-of-war', [delta, epsilon, const, sampleSize]);
     toc;
     error = C - C_approx;
     error_norm = norm(error, 'fro');
-    disp(error1_norm/AB_norm);
+    disp(error_norm/AB_norm);
     
     tic;
     C_approx = randomProjMult(A, B, 'clarkson2009numerical', [delta, epsilon, const, sampleSize]);
     toc;
     error = C - C_approx;
     error_norm = norm(error, 'fro');
-    disp(error1_norm/AB_norm);
+    disp(error_norm/AB_norm);
 
     tic;
     C_approx = randomProjMult(A, B, 'kyrillidis2014approximate', [delta, epsilon, const, sampleSize]);
     toc;
     error = C - C_approx;
     error_norm = norm(error, 'fro');
-    disp(error1_norm/AB_norm);
+    disp(error_norm/AB_norm);
   end
 end
 end

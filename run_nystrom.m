@@ -66,7 +66,7 @@ for k = 1:5
     toc;
     error = C - C_approx;
     error_norm = norm(error, 'fro');
-    disp(error1_norm/AB_norm);
+    disp(error_norm/AB_norm);
   end
 end
 end
