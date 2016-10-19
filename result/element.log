@@ -1,0 +1,131 @@
+
+                            < M A T L A B (R) >
+                  Copyright 1984-2012 The MathWorks, Inc.
+                    R2012b (8.0.0.783) 64-bit (glnxa64)
+                              August 22, 2012
+
+ 
+To get started, type one of these: helpwin, helpdesk, or demo.
+For product information, visit www.mathworks.com.
+ 
+    10
+
+--------------------------------------------
+--------------------------------------------
+generating done
+direct mult
+Elapsed time is 3058.763856 seconds.
+-----------------------
+l2 norm sampling:
+Elapsed time is 1233.685705 seconds.
+  104.5823
+
+l2 norm sampling:
+Elapsed time is 1238.518106 seconds.
+  104.1652
+
+l2 norm sampling:
+Elapsed time is 1226.338430 seconds.
+  104.8271
+
+l2 norm sampling:
+Elapsed time is 1203.065015 seconds.
+  105.1172
+
+l2 norm sampling:
+Elapsed time is 1203.001549 seconds.
+  104.5402
+
+l2 norm sampling:
+Elapsed time is 1203.070140 seconds.
+  104.3331
+
+l2 norm sampling:
+Elapsed time is 1203.320382 seconds.
+  104.9506
+
+l2 norm sampling:
+Elapsed time is 1203.006070 seconds.
+  104.8468
+
+l2 norm sampling:
+Elapsed time is 1203.325398 seconds.
+  104.1718
+
+l2 norm sampling:
+Elapsed time is 1203.234896 seconds.
+  105.2167
+
+generating done
+direct mult
+Elapsed time is 3036.191566 seconds.
+-----------------------
+l2 norm sampling:
+Elapsed time is 1206.551214 seconds.
+  104.3132
+
+l2 norm sampling:
+Elapsed time is 1202.417715 seconds.
+  104.8573
+
+l2 norm sampling:
+Elapsed time is 1272.878740 seconds.
+  104.8350
+
+l2 norm sampling:
+Elapsed time is 1284.033390 seconds.
+  104.4321
+
+l2 norm sampling:
+Elapsed time is 1282.797000 seconds.
+  104.2419
+
+l2 norm sampling:
+Elapsed time is 1283.966118 seconds.
+  104.3317
+
+l2 norm sampling:
+Elapsed time is 1282.510905 seconds.
+  104.0924
+
+l2 norm sampling:
+Elapsed time is 1282.566447 seconds.
+  104.8153
+
+l2 norm sampling:
+Elapsed time is 1286.042704 seconds.
+  104.6706
+
+l2 norm sampling:
+Elapsed time is 1287.148031 seconds.
+  104.8718
+
+generating done
+direct mult
+Elapsed time is 3064.395361 seconds.
+-----------------------
+l2 norm sampling:
+Elapsed time is 1284.311707 seconds.
+  104.9571
+
+l2 norm sampling:
+Elapsed time is 1281.436889 seconds.
+  104.5441
+
+l2 norm sampling:
+Elapsed time is 1278.959870 seconds.
+  105.1250
+
+l2 norm sampling:
+Elapsed time is 1279.130736 seconds.
+  104.9558
+
+l2 norm sampling:
+Elapsed time is 1278.155806 seconds.
+  104.7535
+
+l2 norm sampling:
+Elapsed time is 1279.983530 seconds.
+  104.1983
+
+l2 norm sampling:

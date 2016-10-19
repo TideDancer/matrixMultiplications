@@ -1,0 +1,430 @@
+
+                            < M A T L A B (R) >
+                  Copyright 1984-2012 The MathWorks, Inc.
+                    R2012b (8.0.0.783) 64-bit (glnxa64)
+                              August 22, 2012
+
+ 
+To get started, type one of these: helpwin, helpdesk, or demo.
+For product information, visit www.mathworks.com.
+ 
+    32
+
+--------------------------------------------
+--------------------------------------------
+generating done
+direct mult
+Elapsed time is 3252.456551 seconds.
+-----------------------
+Elapsed time is 29.008647 seconds.
+    0.1767
+
+Elapsed time is 28.851787 seconds.
+    0.1767
+
+Elapsed time is 28.885759 seconds.
+    0.1767
+
+Elapsed time is 28.846729 seconds.
+    0.1767
+
+Elapsed time is 28.859408 seconds.
+    0.1767
+
+Elapsed time is 28.846983 seconds.
+    0.1767
+
+Elapsed time is 28.850752 seconds.
+    0.1767
+
+Elapsed time is 28.856642 seconds.
+    0.1767
+
+Elapsed time is 28.845844 seconds.
+    0.1767
+
+Elapsed time is 28.850274 seconds.
+    0.1767
+
+generating done
+direct mult
+Elapsed time is 2855.050143 seconds.
+-----------------------
+Elapsed time is 28.868366 seconds.
+    0.1767
+
+Elapsed time is 28.866005 seconds.
+    0.1767
+
+Elapsed time is 28.882968 seconds.
+    0.1767
+
+Elapsed time is 28.889859 seconds.
+    0.1767
+
+Elapsed time is 28.864214 seconds.
+    0.1767
+
+Elapsed time is 28.865139 seconds.
+    0.1767
+
+Elapsed time is 28.896176 seconds.
+    0.1767
+
+Elapsed time is 28.859812 seconds.
+    0.1767
+
+Elapsed time is 28.861327 seconds.
+    0.1767
+
+Elapsed time is 28.853098 seconds.
+    0.1767
+
+generating done
+direct mult
+Elapsed time is 2855.082631 seconds.
+-----------------------
+Elapsed time is 28.848145 seconds.
+    0.1767
+
+Elapsed time is 28.844901 seconds.
+    0.1767
+
+Elapsed time is 28.855504 seconds.
+    0.1767
+
+Elapsed time is 28.855285 seconds.
+    0.1767
+
+Elapsed time is 28.840847 seconds.
+    0.1767
+
+Elapsed time is 28.842459 seconds.
+    0.1767
+
+Elapsed time is 28.838666 seconds.
+    0.1767
+
+Elapsed time is 28.842998 seconds.
+    0.1767
+
+Elapsed time is 28.856788 seconds.
+    0.1767
+
+Elapsed time is 28.855750 seconds.
+    0.1767
+
+generating done
+direct mult
+Elapsed time is 2892.781593 seconds.
+-----------------------
+Elapsed time is 31.158109 seconds.
+    0.1767
+
+Elapsed time is 31.142499 seconds.
+    0.1767
+
+Elapsed time is 31.236054 seconds.
+    0.1767
+
+Elapsed time is 30.867631 seconds.
+    0.1767
+
+Elapsed time is 31.111672 seconds.
+    0.1767
+
+Elapsed time is 31.100818 seconds.
+    0.1767
+
+Elapsed time is 31.120560 seconds.
+    0.1767
+
+Elapsed time is 30.881606 seconds.
+    0.1767
+
+Elapsed time is 31.105295 seconds.
+    0.1767
+
+Elapsed time is 31.101685 seconds.
+    0.1767
+
+generating done
+direct mult
+Elapsed time is 3062.426508 seconds.
+-----------------------
+Elapsed time is 31.168570 seconds.
+    0.1767
+
+Elapsed time is 31.092444 seconds.
+    0.1767
+
+Elapsed time is 31.056335 seconds.
+    0.1767
+
+Elapsed time is 31.009219 seconds.
+    0.1767
+
+Elapsed time is 30.926140 seconds.
+    0.1767
+
+Elapsed time is 31.076342 seconds.
+    0.1767
+
+Elapsed time is 31.133426 seconds.
+    0.1767
+
+Elapsed time is 31.073066 seconds.
+    0.1767
+
+Elapsed time is 30.894739 seconds.
+    0.1767
+
+Elapsed time is 30.988397 seconds.
+    0.1767
+
+    64
+
+--------------------------------------------
+--------------------------------------------
+generating done
+direct mult
+Elapsed time is 3062.831866 seconds.
+-----------------------
+Elapsed time is 34.252981 seconds.
+    0.1249
+
+Elapsed time is 34.257242 seconds.
+    0.1249
+
+Elapsed time is 34.224056 seconds.
+    0.1249
+
+Elapsed time is 34.264750 seconds.
+    0.1249
+
+Elapsed time is 34.249363 seconds.
+    0.1249
+
+Elapsed time is 34.231343 seconds.
+    0.1249
+
+Elapsed time is 34.255809 seconds.
+    0.1249
+
+Elapsed time is 34.231025 seconds.
+    0.1249
+
+Elapsed time is 34.230246 seconds.
+    0.1249
+
+Elapsed time is 34.131189 seconds.
+    0.1249
+
+generating done
+direct mult
+Elapsed time is 2974.703890 seconds.
+-----------------------
+Elapsed time is 32.552653 seconds.
+    0.1249
+
+Elapsed time is 32.492040 seconds.
+    0.1249
+
+Elapsed time is 32.352154 seconds.
+    0.1249
+
+Elapsed time is 32.349468 seconds.
+    0.1249
+
+Elapsed time is 32.336741 seconds.
+    0.1249
+
+Elapsed time is 32.500166 seconds.
+    0.1249
+
+Elapsed time is 32.554849 seconds.
+    0.1249
+
+Elapsed time is 32.520348 seconds.
+    0.1249
+
+Elapsed time is 32.571215 seconds.
+    0.1249
+
+Elapsed time is 32.477461 seconds.
+    0.1249
+
+generating done
+direct mult
+Elapsed time is 2930.324787 seconds.
+-----------------------
+Elapsed time is 32.581031 seconds.
+    0.1249
+
+Elapsed time is 32.586980 seconds.
+    0.1249
+
+Elapsed time is 32.520311 seconds.
+    0.1249
+
+Elapsed time is 32.603757 seconds.
+    0.1249
+
+Elapsed time is 32.585115 seconds.
+    0.1249
+
+Elapsed time is 32.497116 seconds.
+    0.1249
+
+Elapsed time is 32.598465 seconds.
+    0.1249
+
+Elapsed time is 32.596970 seconds.
+    0.1249
+
+Elapsed time is 32.436273 seconds.
+    0.1249
+
+Elapsed time is 32.439324 seconds.
+    0.1249
+
+generating done
+direct mult
+Elapsed time is 2912.348471 seconds.
+-----------------------
+Elapsed time is 31.906238 seconds.
+    0.1249
+
+Elapsed time is 31.911625 seconds.
+    0.1249
+
+Elapsed time is 31.888741 seconds.
+    0.1249
+
+Elapsed time is 31.920882 seconds.
+    0.1249
+
+Elapsed time is 31.905549 seconds.
+    0.1249
+
+Elapsed time is 31.928644 seconds.
+    0.1249
+
+Elapsed time is 31.900456 seconds.
+    0.1249
+
+Elapsed time is 31.902617 seconds.
+    0.1249
+
+Elapsed time is 31.904377 seconds.
+    0.1249
+
+Elapsed time is 31.879546 seconds.
+    0.1249
+
+generating done
+direct mult
+Elapsed time is 2867.546950 seconds.
+-----------------------
+Elapsed time is 32.011220 seconds.
+    0.1249
+
+Elapsed time is 31.978794 seconds.
+    0.1249
+
+Elapsed time is 31.914608 seconds.
+    0.1249
+
+Elapsed time is 31.916626 seconds.
+    0.1249
+
+Elapsed time is 31.974428 seconds.
+    0.1249
+
+Elapsed time is 31.933454 seconds.
+    0.1249
+
+Elapsed time is 31.968230 seconds.
+    0.1249
+
+Elapsed time is 31.916241 seconds.
+    0.1249
+
+Elapsed time is 31.923642 seconds.
+    0.1249
+
+Elapsed time is 31.892353 seconds.
+    0.1249
+
+   128
+
+--------------------------------------------
+--------------------------------------------
+generating done
+direct mult
+Elapsed time is 2866.035671 seconds.
+-----------------------
+Elapsed time is 37.910505 seconds.
+    0.0882
+
+Elapsed time is 38.509943 seconds.
+    0.0882
+
+Elapsed time is 38.559659 seconds.
+    0.0882
+
+Elapsed time is 38.464522 seconds.
+    0.0882
+
+Elapsed time is 38.494461 seconds.
+    0.0882
+
+Elapsed time is 40.066946 seconds.
+    0.0882
+
+Elapsed time is 41.131502 seconds.
+    0.0882
+
+Elapsed time is 41.797087 seconds.
+    0.0882
+
+Elapsed time is 42.447971 seconds.
+    0.0882
+
+Elapsed time is 42.242159 seconds.
+    0.0882
+
+generating done
+direct mult
+Elapsed time is 3096.967881 seconds.
+-----------------------
+Elapsed time is 41.974151 seconds.
+    0.0882
+
+Elapsed time is 41.831077 seconds.
+    0.0882
+
+Elapsed time is 41.875928 seconds.
+    0.0882
+
+Elapsed time is 41.998385 seconds.
+    0.0882
+
+Elapsed time is 41.701928 seconds.
+    0.0882
+
+Elapsed time is 41.971012 seconds.
+    0.0882
+
+Elapsed time is 41.954698 seconds.
+    0.0882
+
+Elapsed time is 41.742009 seconds.
+    0.0882
+
+Elapsed time is 42.035419 seconds.
+    0.0882
+
+Elapsed time is 42.097484 seconds.
+    0.0882
+

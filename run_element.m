@@ -37,9 +37,9 @@ c = 2^15;
 % disp('gallery(sampling,dim),gallery(chebspec,dim,1)');
 
 % start computing
-for l_dim = 1:10
-l = 10^l_dim;
-disp(l);
+for sampleDim = 5:14
+sampleSize = 2^sampleDim;
+disp(sampleSize);
 disp('--------------------------------------------');
 disp('--------------------------------------------');
 for k = 1:5
@@ -48,8 +48,6 @@ for k = 1:5
   clear B;
   A = randn(r,c);
   B = randn(r,c);
-  dim = c;
-  epsilon = sqrt(20*sqrt(dim/l) + 100*dim/l);
 
   disp('generating done');
   disp('direct mult');
@@ -59,14 +57,12 @@ for k = 1:5
   disp('-----------------------');
   A_norm = norm(A, 'fro');
   B_norm = norm(B, 'fro');
-  AB_norm = A_norm * B_norm;
-  C_norm = norm(C, 'fro');
+  AB_norm = A_norm * B_norm
+  C_norm = norm(C, 'fro')
 
   for i = 1:10
-
-    disp('l2 norm sampling:')
     tic;
-    C_approx = elementMatrixMult(A, B, 'l2', l); % default failure probability 1/n
+    C_approx = elementMatrixMult(A, B, 'l2', sampleSize); % default failure probability 1/n
     toc;
     error = C - C_approx;
     error_norm = norm(error, 'fro');

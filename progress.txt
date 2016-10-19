@@ -26,3 +26,4 @@ cs based tested and done:
 linear equation tested and done:
   speed and accuracy ok
   therotically has problem, why n^2
+  prove to be wrong

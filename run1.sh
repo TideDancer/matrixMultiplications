@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH -n 6
+#SBATCH -n 1
 #SBATCH -o outfile.txt
 #SBATCH -e errfile.txt
 

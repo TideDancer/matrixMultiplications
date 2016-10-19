@@ -62,7 +62,7 @@ for k = 1:5
 
   for i = 1:10
     tic;
-    C_approx = basicMatrixMult(A, B, 'column2norm', [sampleSize, delta]);
+    C_approx = nystrom(A, B, sampleSize);
     toc;
     error = C - C_approx;
     error_norm = norm(error, 'fro');

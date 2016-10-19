@@ -1,57 +1,94 @@
 % random matrix test 
-A_norm = [];
-B_norm = [];
-C_norm = [];
-errRatio1 = []; errRatio2 = []; errRatio3 = [];
+delta = 1e-2;  % failure probability
+epsilon = 1e-2; % error norm <= epsilon ||A|| ||B||
+beta = 1;
+const = 1;
 
-range = 12:12;
+matrix = 'high condition';
+cond_num = 10^5;
 
-for i = range
-  i
-  dim = 2^i;
-  
-  A = squareMatrixGen(dim, 'dense', 'normal');
-  B = squareMatrixGen(dim, 'dense', 'normal');
-  
-  delta = 1/dim;
-  epsilon = 1e-1;
-  const = 1; 
-  
-%  tic;
-%  C_approx1 = randomProjMult(A, B, 'kyrillidis2014approximate', [delta, epsilon, const]); % kyrillidis2014 paper
-%  toc;
-  tic;
-  C_approx1 = randomProjMult(A, B, 'clarkson2009numerical', [delta, epsilon, const]); % clarkson2009numerical paper
-  toc;
- 
-  tic;
-%  C_approx2 = randomProjMult(A, B, 'FJLT', [delta, epsilon, const]);
-  toc;
-  tic;
-%  C_approx3 = randomProjMult(A, B, 'tug-of-war', [delta, epsilon, const]);
-  toc;
+r = 2^15;
+c = 2^15;
 
-  % ------------------- compare --------------------------
+% % build coherent matrix
+% Z = zeros(dim); I = eye(dim); O = ones(dim).*1e-8; 
+% R = rand(dim).*1e-8; alphaB = randn(dim)*1e8;
+% A = [A(1:dim/2, :); Z(1:dim/2, :)] + O;
+% B = [B(:, 1:dim/2)  Z(:, 1:dim/2)] + O;
+
+%%%% dexter %%%%%
+% load('dexter.mat');
+% A = dexter1; B = dexter2';
+% min(leverage(A))
+
+% %%%% heart1 %%%%%
+% load('goodwin.mat');
+% A = full(Problem.A)./1000;
+% B = A(randperm(end),randperm(end));
+
+% ------- geometrically distributed singular values ------
+% A = gallery('randsvd', dim ,cond_num, 3);
+% B = gallery('randsvd', dim ,cond_num, 3);
+% disp('gallery(randsvd, dim ,cond_num, 3)');
+
+%% ------- crazy matrix --------
+% A = gallery('sampling', dim);
+% B = gallery('chebspec',dim,1);
+% disp('gallery(sampling,dim),gallery(chebspec,dim,1)');
+
+% start computing
+for sampleDim = 5:14
+sampleSize = 2^sampleDim;
+disp(sampleSize);
+disp('--------------------------------------------');
+disp('--------------------------------------------');
+for k = 1:5
+  % ------- randn matrix ------
+  clear A;
+  clear B;
+  A = randn(r,c);
+  B = randn(r,c);
+
+  disp('generating done');
+  disp('direct mult');
   tic;
   C = A*B;
   toc;
+  disp('-----------------------');
   A_norm = norm(A, 'fro');
   B_norm = norm(B, 'fro');
-  AB_norm = A_norm * B_norm;
-  C_norm = norm(C, 'fro');
-  
-  error1 = C - C_approx1;
-  error1_norm = norm(error1, 'fro');
-  errRatio1 = [errRatio1 error1_norm/AB_norm];
-  
-%  error2 = C - C_approx2;
-%  error2_norm = norm(error2, 'fro');
-%  errRatio2 = [errRatio2 error2_norm/AB_norm];
-%
- % error3 = C - C_approx3;
- % error3_norm = norm(error3, 'fro');
- % errRatio3 = [errRatio3 error3_norm/AB_norm];
-%%
+  AB_norm = A_norm * B_norm
+  C_norm = norm(C, 'fro')
+
+  for i = 1:10
+    disp('--------- following methods -----------');
+    tic;
+    C_approx = randomProjMult(A, B, 'FJLT', [delta, epsilon, const, sampleSize]);
+    toc;
+    error = C - C_approx;
+    error_norm = norm(error, 'fro');
+    disp(error1_norm/AB_norm);
+
+    tic;
+    C_approx = randomProjMult(A, B, 'tug-of-war', [delta, epsilon, const, sampleSize]);
+    toc;
+    error = C - C_approx;
+    error_norm = norm(error, 'fro');
+    disp(error1_norm/AB_norm);
+    
+    tic;
+    C_approx = randomProjMult(A, B, 'clarkson2009numerical', [delta, epsilon, const, sampleSize]);
+    toc;
+    error = C - C_approx;
+    error_norm = norm(error, 'fro');
+    disp(error1_norm/AB_norm);
+
+    tic;
+    C_approx = randomProjMult(A, B, 'kyrillidis2014approximate', [delta, epsilon, const, sampleSize]);
+    toc;
+    error = C - C_approx;
+    error_norm = norm(error, 'fro');
+    disp(error1_norm/AB_norm);
+  end
 end
-
-
+end
