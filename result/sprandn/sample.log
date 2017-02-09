@@ -1,0 +1,543 @@
+MATLAB is selecting SOFTWARE OPENGL rendering.
+
+                            < M A T L A B (R) >
+                  Copyright 1984-2015 The MathWorks, Inc.
+                   R2015a (8.5.0.197613) 64-bit (glnxa64)
+                             February 12, 2015
+
+ 
+To get started, type one of these: helpwin, helpdesk, or demo.
+For product information, visit www.mathworks.com.
+ 
+
+	Academic License
+
+>> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >>     32
+
+--------------------------------------------
+--------------------------------------------
+
+sparsity =
+
+    0.0100
+
+generating done
+direct mult
+Elapsed time is 22.666919 seconds.
+-----------------------
+
+AB_norm =
+
+   2.6712e+06
+
+
+C_norm =
+
+   2.0867e+04
+
+Elapsed time is 41.020023 seconds.
+    0.1758
+
+Elapsed time is 39.552349 seconds.
+    0.1758
+
+Elapsed time is 42.356172 seconds.
+    0.1758
+
+
+sparsity =
+
+   1.0000e-03
+
+generating done
+direct mult
+Elapsed time is 0.349157 seconds.
+-----------------------
+
+AB_norm =
+
+   2.6773e+05
+
+
+C_norm =
+
+   2.0931e+03
+
+Elapsed time is 10.843340 seconds.
+    0.1685
+
+Elapsed time is 8.141526 seconds.
+    0.1685
+
+Elapsed time is 9.637814 seconds.
+    0.1685
+
+
+sparsity =
+
+   1.0000e-04
+
+generating done
+direct mult
+Elapsed time is 0.003326 seconds.
+-----------------------
+
+AB_norm =
+
+   2.6779e+04
+
+
+C_norm =
+
+  209.2850
+
+Elapsed time is 6.532815 seconds.
+    0.1021
+
+Elapsed time is 6.481223 seconds.
+    0.1021
+
+Elapsed time is 5.129742 seconds.
+    0.1021
+
+    64
+
+--------------------------------------------
+--------------------------------------------
+
+sparsity =
+
+    0.0100
+
+generating done
+direct mult
+Elapsed time is 19.714757 seconds.
+-----------------------
+
+AB_norm =
+
+   2.6717e+06
+
+
+C_norm =
+
+   2.0872e+04
+
+Elapsed time is 46.872705 seconds.
+    0.1242
+
+Elapsed time is 44.407025 seconds.
+    0.1242
+
+Elapsed time is 48.927376 seconds.
+    0.1242
+
+
+sparsity =
+
+   1.0000e-03
+
+generating done
+direct mult
+Elapsed time is 0.325786 seconds.
+-----------------------
+
+AB_norm =
+
+   2.6887e+05
+
+
+C_norm =
+
+   2.1002e+03
+
+Elapsed time is 7.836291 seconds.
+    0.1190
+
+Elapsed time is 7.924642 seconds.
+    0.1190
+
+Elapsed time is 7.930286 seconds.
+    0.1190
+
+
+sparsity =
+
+   1.0000e-04
+
+generating done
+direct mult
+Elapsed time is 0.002580 seconds.
+-----------------------
+
+AB_norm =
+
+   2.6706e+04
+
+
+C_norm =
+
+  208.9370
+
+Elapsed time is 5.844482 seconds.
+    0.0720
+
+Elapsed time is 5.643186 seconds.
+    0.0721
+
+Elapsed time is 5.166221 seconds.
+    0.0720
+
+   128
+
+--------------------------------------------
+--------------------------------------------
+
+sparsity =
+
+    0.0100
+
+generating done
+direct mult
+Elapsed time is 23.595737 seconds.
+-----------------------
+
+AB_norm =
+
+   2.6690e+06
+
+
+C_norm =
+
+   2.0855e+04
+
+Elapsed time is 44.018483 seconds.
+    0.0876
+
+Elapsed time is 48.956422 seconds.
+    0.0876
+
+Elapsed time is 46.501921 seconds.
+    0.0876
+
+
+sparsity =
+
+   1.0000e-03
+
+generating done
+direct mult
+Elapsed time is 0.329626 seconds.
+-----------------------
+
+AB_norm =
+
+   2.6830e+05
+
+
+C_norm =
+
+   2.0938e+03
+
+Elapsed time is 7.967336 seconds.
+    0.0839
+
+Elapsed time is 8.290331 seconds.
+    0.0839
+
+Elapsed time is 9.075999 seconds.
+    0.0839
+
+
+sparsity =
+
+   1.0000e-04
+
+generating done
+direct mult
+Elapsed time is 0.003661 seconds.
+-----------------------
+
+AB_norm =
+
+   2.7083e+04
+
+
+C_norm =
+
+  213.0137
+
+Elapsed time is 5.215384 seconds.
+    0.0507
+
+Elapsed time is 5.300100 seconds.
+    0.0507
+
+Elapsed time is 6.696143 seconds.
+    0.0507
+
+   256
+
+--------------------------------------------
+--------------------------------------------
+
+sparsity =
+
+    0.0100
+
+generating done
+direct mult
+Elapsed time is 27.220695 seconds.
+-----------------------
+
+AB_norm =
+
+   2.6702e+06
+
+
+C_norm =
+
+   2.0860e+04
+
+Elapsed time is 37.552877 seconds.
+    0.0617
+
+Elapsed time is 49.992559 seconds.
+    0.0617
+
+Elapsed time is 47.284229 seconds.
+    0.0617
+
+
+sparsity =
+
+   1.0000e-03
+
+generating done
+direct mult
+Elapsed time is 0.373908 seconds.
+-----------------------
+
+AB_norm =
+
+   2.6803e+05
+
+
+C_norm =
+
+   2.0969e+03
+
+Elapsed time is 9.870161 seconds.
+    0.0591
+
+Elapsed time is 8.705648 seconds.
+    0.0591
+
+Elapsed time is 10.176857 seconds.
+    0.0592
+
+
+sparsity =
+
+   1.0000e-04
+
+generating done
+direct mult
+Elapsed time is 0.002606 seconds.
+-----------------------
+
+AB_norm =
+
+   2.6874e+04
+
+
+C_norm =
+
+  208.7121
+
+Elapsed time is 5.361070 seconds.
+    0.0355
+
+Elapsed time is 5.345980 seconds.
+    0.0355
+
+Elapsed time is 5.349696 seconds.
+    0.0355
+
+   512
+
+--------------------------------------------
+--------------------------------------------
+
+sparsity =
+
+    0.0100
+
+generating done
+direct mult
+Elapsed time is 26.647341 seconds.
+-----------------------
+
+AB_norm =
+
+   2.6705e+06
+
+
+C_norm =
+
+   2.0864e+04
+
+Elapsed time is 45.549328 seconds.
+    0.0433
+
+Elapsed time is 50.610249 seconds.
+    0.0433
+
+Elapsed time is 48.490193 seconds.
+    0.0433
+
+
+sparsity =
+
+   1.0000e-03
+
+generating done
+direct mult
+Elapsed time is 0.321416 seconds.
+-----------------------
+
+AB_norm =
+
+   2.6767e+05
+
+
+C_norm =
+
+   2.0892e+03
+
+Elapsed time is 8.741297 seconds.
+    0.0414
+
+Elapsed time is 8.622574 seconds.
+    0.0414
+
+Elapsed time is 8.760418 seconds.
+    0.0414
+
+
+sparsity =
+
+   1.0000e-04
+
+generating done
+direct mult
+Elapsed time is 0.002974 seconds.
+-----------------------
+
+AB_norm =
+
+   2.7014e+04
+
+
+C_norm =
+
+  214.4958
+
+Elapsed time is 5.483217 seconds.
+    0.0248
+
+Elapsed time is 5.665053 seconds.
+    0.0249
+
+Elapsed time is 6.484214 seconds.
+    0.0248
+
+        1024
+
+--------------------------------------------
+--------------------------------------------
+
+sparsity =
+
+    0.0100
+
+generating done
+direct mult
+Elapsed time is 22.267844 seconds.
+-----------------------
+
+AB_norm =
+
+   2.6715e+06
+
+
+C_norm =
+
+   2.0869e+04
+
+Elapsed time is 50.612122 seconds.
+    0.0301
+
+Elapsed time is 50.940385 seconds.
+    0.0301
+
+Elapsed time is 60.448866 seconds.
+    0.0301
+
+
+sparsity =
+
+   1.0000e-03
+
+generating done
+direct mult
+Elapsed time is 0.317269 seconds.
+-----------------------
+
+AB_norm =
+
+   2.6710e+05
+
+
+C_norm =
+
+   2.0878e+03
+
+Elapsed time is 9.835803 seconds.
+    0.0287
+
+Elapsed time is 9.856105 seconds.
+    0.0288
+
+Elapsed time is 9.794800 seconds.
+    0.0288
+
+
+sparsity =
+
+   1.0000e-04
+
+generating done
+direct mult
+Elapsed time is 0.002999 seconds.
+-----------------------
+
+AB_norm =
+
+   2.6784e+04
+
+
+C_norm =
+
+  209.6188
+
+Elapsed time is 5.921006 seconds.
+    0.0164
+
+Elapsed time is 5.884360 seconds.
+    0.0164
+
+Elapsed time is 5.904941 seconds.
+    0.0164
+
+>> 

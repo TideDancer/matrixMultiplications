@@ -47,8 +47,8 @@ for k = 2:4
   clear A;
   clear B;
   sparsity = 10^(-k)
-  A = sprandn(r,c, sparsity);
-  B = sprandn(r,c, sparsity);
+  A = sprandn(r,c,sparsity);
+  B = sprandn(r,c,sparsity);
 
   disp('generating done');
   disp('direct mult');
@@ -63,7 +63,7 @@ for k = 2:4
 
   for i = 1:3
     tic;
-    C_approx = basicMatrixMult(A, B, 'column2norm', [sampleSize, delta]);
+    C_approx = nystrom(A, B, sampleSize);
     toc;
     error = C - C_approx;
     error_norm = norm(error, 'fro');

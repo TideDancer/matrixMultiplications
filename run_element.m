@@ -7,8 +7,8 @@ const = 1;
 matrix = 'high condition';
 cond_num = 10^5;
 
-r = 2^15;
-c = 2^15;
+r = 2^14;
+c = 2^14;
 
 % % build coherent matrix
 % Z = zeros(dim); I = eye(dim); O = ones(dim).*1e-8; 
@@ -37,17 +37,18 @@ c = 2^15;
 % disp('gallery(sampling,dim),gallery(chebspec,dim,1)');
 
 % start computing
-for sampleDim = 5:14
+for sampleDim = 5:10
 sampleSize = 2^sampleDim;
 disp(sampleSize);
 disp('--------------------------------------------');
 disp('--------------------------------------------');
-for k = 1:5
+for k = 2:4
   % ------- randn matrix ------
   clear A;
   clear B;
-  A = randn(r,c);
-  B = randn(r,c);
+  sparsity = 10^(-k)
+  A = sprandn(r,c,sparsity);
+  B = sprandn(r,c,sparsity);
 
   disp('generating done');
   disp('direct mult');
@@ -60,7 +61,7 @@ for k = 1:5
   AB_norm = A_norm * B_norm
   C_norm = norm(C, 'fro')
 
-  for i = 1:10
+  for i = 1:3
     tic;
     C_approx = elementMatrixMult(A, B, 'l2', sampleSize); % default failure probability 1/n
     toc;

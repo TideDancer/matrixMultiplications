@@ -9,14 +9,19 @@ function C_approx = compressedSensing(A, B, parameterList);
 const = parameterList(1); % default = 1;
 gamma = parameterList(2); % default = 1; c-gamma compressible, check definition
 epsilon = parameterList(3);
+sampleSize = parameterList(4);
 m = round(log10(n));
 
 % build measurement matrix
-rows = round( (m+1/gamma) * 2^(const * log10(log10(n))^2) );
-if rows > r
-  disp('rows > r');
-  C_approx = inf;
-  return;
+if sampleSize == []
+  rows = round( (m+1/gamma) * 2^(const * log10(log10(n))^2) );
+  if rows > r
+    disp('rows > r');
+    C_approx = inf;
+    return;
+  end
+else
+  rows = sampleSize;
 end
 M = randn(rows, n);
 
@@ -27,7 +32,7 @@ addpath 'l1magic/l1magic/Optimization/';
 addpath 'YALL1_v1.4';
 
 % following is from l1magic examples except the observation building P
-M = orth(M')'; % orthogonalize matrix according to examples in l1magic, a transpose at the end ensure dimension match
+% M = orth(M')'; % orthogonalize matrix according to examples in l1magic, a transpose at the end ensure dimension match
 
 % observations
 P = (M*A)*B;

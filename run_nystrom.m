@@ -7,8 +7,8 @@ const = 1;
 matrix = 'high condition';
 cond_num = 10^5;
 
-r = 2^15;
-c = 2^15;
+r = 2^14;
+c = 2^14;
 
 % % build coherent matrix
 % Z = zeros(dim); I = eye(dim); O = ones(dim).*1e-8; 
@@ -37,7 +37,7 @@ c = 2^15;
 % disp('gallery(sampling,dim),gallery(chebspec,dim,1)');
 
 % start computing
-for sampleDim = 5:14
+for sampleDim = 5:10
 sampleSize = 2^sampleDim;
 disp(sampleSize);
 disp('--------------------------------------------');

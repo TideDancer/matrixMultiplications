@@ -1,0 +1,1083 @@
+MATLAB is selecting SOFTWARE OPENGL rendering.
+
+                            < M A T L A B (R) >
+                  Copyright 1984-2015 The MathWorks, Inc.
+                   R2015a (8.5.0.197613) 64-bit (glnxa64)
+                             February 12, 2015
+
+ 
+To get started, type one of these: helpwin, helpdesk, or demo.
+For product information, visit www.mathworks.com.
+ 
+
+	Academic License
+
+>> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >>     32
+
+--------------------------------------------
+--------------------------------------------
+
+sparsity =
+
+    0.0100
+
+generating done
+direct mult
+Elapsed time is 25.426746 seconds.
+-----------------------
+
+AB_norm =
+
+   2.6712e+06
+
+
+C_norm =
+
+   2.0867e+04
+
+--------- following methods -----------
+Elapsed time is 28285.810357 seconds.
+   9.1255e+04
+
+Elapsed time is 4.794291 seconds.
+    5.6616
+
+Elapsed time is 0.984361 seconds.
+    0.1769
+
+Elapsed time is 0.916755 seconds.
+    0.1769
+
+--------- following methods -----------
+Elapsed time is 26119.014687 seconds.
+   9.7098e+04
+
+Elapsed time is 3.917194 seconds.
+    5.6638
+
+Elapsed time is 1.031035 seconds.
+    0.1772
+
+Elapsed time is 0.928645 seconds.
+    0.1769
+
+--------- following methods -----------
+Elapsed time is 27005.512769 seconds.
+   8.2668e+04
+
+Elapsed time is 4.546277 seconds.
+    5.6634
+
+Elapsed time is 0.816749 seconds.
+    0.1767
+
+Elapsed time is 0.817082 seconds.
+    0.1760
+
+
+sparsity =
+
+   1.0000e-03
+
+generating done
+direct mult
+Elapsed time is 0.281976 seconds.
+-----------------------
+
+AB_norm =
+
+   2.6795e+05
+
+
+C_norm =
+
+   2.0899e+03
+
+--------- following methods -----------
+Elapsed time is 3158.355915 seconds.
+   9.0378e+04
+
+Elapsed time is 1.009102 seconds.
+    5.6707
+
+Elapsed time is 0.423379 seconds.
+    0.1766
+
+Elapsed time is 0.456961 seconds.
+    0.1773
+
+--------- following methods -----------
+Elapsed time is 3070.336776 seconds.
+   1.0056e+05
+
+Elapsed time is 0.739711 seconds.
+    5.6700
+
+Elapsed time is 0.454115 seconds.
+    0.1769
+
+Elapsed time is 0.478680 seconds.
+    0.1765
+
+--------- following methods -----------
+Elapsed time is 3329.239192 seconds.
+   1.0008e+05
+
+Elapsed time is 0.954410 seconds.
+    5.6688
+
+Elapsed time is 0.420874 seconds.
+    0.1769
+
+Elapsed time is 0.407374 seconds.
+    0.1766
+
+
+sparsity =
+
+   1.0000e-04
+
+generating done
+direct mult
+Elapsed time is 0.003595 seconds.
+-----------------------
+
+AB_norm =
+
+   2.6528e+04
+
+
+C_norm =
+
+  206.5975
+
+--------- following methods -----------
+Elapsed time is 577.323465 seconds.
+   9.4530e+04
+
+Elapsed time is 0.597147 seconds.
+    5.6520
+
+Elapsed time is 0.381669 seconds.
+    0.1767
+
+Elapsed time is 0.395058 seconds.
+    0.1770
+
+--------- following methods -----------
+Elapsed time is 556.051449 seconds.
+   8.9944e+04
+
+Elapsed time is 0.598343 seconds.
+    5.6569
+
+Elapsed time is 0.384925 seconds.
+    0.1768
+
+Elapsed time is 0.388093 seconds.
+    0.1764
+
+--------- following methods -----------
+Elapsed time is 598.743697 seconds.
+   9.4370e+04
+
+Elapsed time is 0.616787 seconds.
+    5.6672
+
+Elapsed time is 0.356537 seconds.
+    0.1773
+
+Elapsed time is 0.363159 seconds.
+    0.1771
+
+    64
+
+--------------------------------------------
+--------------------------------------------
+
+sparsity =
+
+    0.0100
+
+generating done
+direct mult
+Elapsed time is 21.521969 seconds.
+-----------------------
+
+AB_norm =
+
+   2.6711e+06
+
+
+C_norm =
+
+   2.0868e+04
+
+--------- following methods -----------
+Elapsed time is 29757.649523 seconds.
+   1.3022e+05
+
+Elapsed time is 6.603195 seconds.
+    8.0025
+
+Elapsed time is 2.063061 seconds.
+    0.1249
+
+Elapsed time is 1.601244 seconds.
+    0.1250
+
+--------- following methods -----------
+Elapsed time is 30248.502246 seconds.
+   1.3518e+05
+
+Elapsed time is 7.261621 seconds.
+    8.0211
+
+Elapsed time is 1.677984 seconds.
+    0.1249
+
+Elapsed time is 1.763278 seconds.
+    0.1250
+
+--------- following methods -----------
+Elapsed time is 28897.021860 seconds.
+   1.3487e+05
+
+Elapsed time is 3.606127 seconds.
+    8.0081
+
+Elapsed time is 0.881186 seconds.
+    0.1248
+
+Elapsed time is 1.264673 seconds.
+    0.1247
+
+
+sparsity =
+
+   1.0000e-03
+
+generating done
+direct mult
+Elapsed time is 0.204734 seconds.
+-----------------------
+
+AB_norm =
+
+   2.6852e+05
+
+
+C_norm =
+
+   2.0974e+03
+
+--------- following methods -----------
+Elapsed time is 787.047505 seconds.
+   1.2242e+05
+
+Elapsed time is 0.621082 seconds.
+    8.0202
+
+Elapsed time is 0.326647 seconds.
+    0.1250
+
+Elapsed time is 0.326515 seconds.
+    0.1253
+
+--------- following methods -----------
+Elapsed time is 786.448723 seconds.
+   1.3211e+05
+
+Elapsed time is 0.637966 seconds.
+    8.0148
+
+Elapsed time is 0.350273 seconds.
+    0.1249
+
+Elapsed time is 0.346405 seconds.
+    0.1247
+
+--------- following methods -----------
+Elapsed time is 779.255688 seconds.
+   1.3037e+05
+
+Elapsed time is 0.697300 seconds.
+    8.0048
+
+Elapsed time is 0.343954 seconds.
+    0.1249
+
+Elapsed time is 0.360264 seconds.
+    0.1250
+
+
+sparsity =
+
+   1.0000e-04
+
+generating done
+direct mult
+Elapsed time is 0.001748 seconds.
+-----------------------
+
+AB_norm =
+
+   2.6646e+04
+
+
+C_norm =
+
+  208.8287
+
+--------- following methods -----------
+Elapsed time is 344.823624 seconds.
+   1.3517e+05
+
+Elapsed time is 0.501432 seconds.
+    8.0060
+
+Elapsed time is 0.303247 seconds.
+    0.1250
+
+Elapsed time is 0.304543 seconds.
+    0.1246
+
+--------- following methods -----------
+Elapsed time is 334.342324 seconds.
+   1.3504e+05
+
+Elapsed time is 0.466027 seconds.
+    8.0065
+
+Elapsed time is 0.303898 seconds.
+    0.1249
+
+Elapsed time is 0.302128 seconds.
+    0.1250
+
+--------- following methods -----------
+Elapsed time is 338.402449 seconds.
+   1.3181e+05
+
+Elapsed time is 0.491071 seconds.
+    8.0182
+
+Elapsed time is 0.333602 seconds.
+    0.1252
+
+Elapsed time is 0.325525 seconds.
+    0.1254
+
+   128
+
+--------------------------------------------
+--------------------------------------------
+
+sparsity =
+
+    0.0100
+
+generating done
+direct mult
+Elapsed time is 15.099782 seconds.
+-----------------------
+
+AB_norm =
+
+   2.6717e+06
+
+
+C_norm =
+
+   2.0876e+04
+
+--------- following methods -----------
+Elapsed time is 11602.994125 seconds.
+   1.8448e+05
+
+Elapsed time is 4.710926 seconds.
+   11.3496
+
+Elapsed time is 1.613964 seconds.
+    0.0883
+
+Elapsed time is 1.590105 seconds.
+    0.0884
+
+--------- following methods -----------
+Elapsed time is 11767.348891 seconds.
+   1.8961e+05
+
+Elapsed time is 4.529519 seconds.
+   11.3483
+
+Elapsed time is 1.656665 seconds.
+    0.0884
+
+Elapsed time is 1.613210 seconds.
+    0.0882
+
+--------- following methods -----------
+Elapsed time is 12099.365637 seconds.
+   1.8369e+05
+
+Elapsed time is 5.004720 seconds.
+   11.3484
+
+Elapsed time is 2.028976 seconds.
+    0.0884
+
+Elapsed time is 1.910022 seconds.
+    0.0884
+
+
+sparsity =
+
+   1.0000e-03
+
+generating done
+direct mult
+Elapsed time is 0.213396 seconds.
+-----------------------
+
+AB_norm =
+
+   2.6814e+05
+
+
+C_norm =
+
+   2.0957e+03
+
+--------- following methods -----------
+Elapsed time is 1176.485698 seconds.
+   1.8828e+05
+
+Elapsed time is 0.964633 seconds.
+   11.3406
+
+Elapsed time is 0.542278 seconds.
+    0.0885
+
+Elapsed time is 0.615917 seconds.
+    0.0884
+
+--------- following methods -----------
+Elapsed time is 1144.395013 seconds.
+   1.9213e+05
+
+Elapsed time is 0.964088 seconds.
+   11.3590
+
+Elapsed time is 0.533033 seconds.
+    0.0885
+
+Elapsed time is 0.548968 seconds.
+    0.0884
+
+--------- following methods -----------
+Elapsed time is 1238.853416 seconds.
+   1.8585e+05
+
+Elapsed time is 1.038672 seconds.
+   11.3460
+
+Elapsed time is 0.543657 seconds.
+    0.0884
+
+Elapsed time is 0.645444 seconds.
+    0.0884
+
+
+sparsity =
+
+   1.0000e-04
+
+generating done
+direct mult
+Elapsed time is 0.001744 seconds.
+-----------------------
+
+AB_norm =
+
+   2.6990e+04
+
+
+C_norm =
+
+  212.5350
+
+--------- following methods -----------
+Elapsed time is 363.393634 seconds.
+   1.8487e+05
+
+Elapsed time is 0.774020 seconds.
+   11.3495
+
+Elapsed time is 0.496133 seconds.
+    0.0884
+
+Elapsed time is 0.474051 seconds.
+    0.0883
+
+--------- following methods -----------
+Elapsed time is 381.966218 seconds.
+   1.7810e+05
+
+Elapsed time is 0.804365 seconds.
+   11.3511
+
+Elapsed time is 0.514262 seconds.
+    0.0883
+
+Elapsed time is 0.493234 seconds.
+    0.0884
+
+--------- following methods -----------
+Elapsed time is 391.533951 seconds.
+   1.8464e+05
+
+Elapsed time is 0.768908 seconds.
+   11.3611
+
+Elapsed time is 0.478054 seconds.
+    0.0883
+
+Elapsed time is 0.502177 seconds.
+    0.0885
+
+   256
+
+--------------------------------------------
+--------------------------------------------
+
+sparsity =
+
+    0.0100
+
+generating done
+direct mult
+Elapsed time is 16.432328 seconds.
+-----------------------
+
+AB_norm =
+
+   2.6717e+06
+
+
+C_norm =
+
+   2.0874e+04
+
+--------- following methods -----------
+Elapsed time is 12938.739293 seconds.
+   2.6419e+05
+
+Elapsed time is 8.251746 seconds.
+   16.1117
+
+Elapsed time is 3.815224 seconds.
+    0.0625
+
+Elapsed time is 3.021433 seconds.
+    0.0625
+
+--------- following methods -----------
+Elapsed time is 10421.001133 seconds.
+   2.6590e+05
+
+Elapsed time is 9.215398 seconds.
+   16.1255
+
+Elapsed time is 3.398644 seconds.
+    0.0625
+
+Elapsed time is 3.875088 seconds.
+    0.0625
+
+--------- following methods -----------
+Elapsed time is 10449.787410 seconds.
+   2.6357e+05
+
+Elapsed time is 9.949732 seconds.
+   16.1308
+
+Elapsed time is 3.853012 seconds.
+    0.0625
+
+Elapsed time is 3.549126 seconds.
+    0.0624
+
+
+sparsity =
+
+   1.0000e-03
+
+generating done
+direct mult
+Elapsed time is 0.235236 seconds.
+-----------------------
+
+AB_norm =
+
+   2.6835e+05
+
+
+C_norm =
+
+   2.0991e+03
+
+--------- following methods -----------
+Elapsed time is 939.868041 seconds.
+   2.5834e+05
+
+Elapsed time is 1.785407 seconds.
+   16.1158
+
+Elapsed time is 0.850629 seconds.
+    0.0625
+
+Elapsed time is 0.980577 seconds.
+    0.0624
+
+--------- following methods -----------
+Elapsed time is 944.982904 seconds.
+   2.6353e+05
+
+Elapsed time is 1.596361 seconds.
+   16.1197
+
+Elapsed time is 0.863341 seconds.
+    0.0625
+
+Elapsed time is 0.910007 seconds.
+    0.0625
+
+--------- following methods -----------
+Elapsed time is 897.784342 seconds.
+   2.6371e+05
+
+Elapsed time is 1.616253 seconds.
+   16.1329
+
+Elapsed time is 0.828927 seconds.
+    0.0625
+
+Elapsed time is 0.899306 seconds.
+    0.0625
+
+
+sparsity =
+
+   1.0000e-04
+
+generating done
+direct mult
+Elapsed time is 0.003648 seconds.
+-----------------------
+
+AB_norm =
+
+   2.7047e+04
+
+
+C_norm =
+
+  211.1851
+
+--------- following methods -----------
+Elapsed time is 323.945413 seconds.
+   2.6019e+05
+
+Elapsed time is 1.282130 seconds.
+   16.1241
+
+Elapsed time is 0.722699 seconds.
+    0.0625
+
+Elapsed time is 0.717492 seconds.
+    0.0626
+
+--------- following methods -----------
+Elapsed time is 325.790239 seconds.
+   2.6077e+05
+
+Elapsed time is 1.286512 seconds.
+   16.1107
+
+Elapsed time is 0.730048 seconds.
+    0.0625
+
+Elapsed time is 0.750843 seconds.
+    0.0626
+
+--------- following methods -----------
+Elapsed time is 333.484219 seconds.
+   2.5925e+05
+
+Elapsed time is 1.183007 seconds.
+   16.1159
+
+Elapsed time is 0.714331 seconds.
+    0.0625
+
+Elapsed time is 0.703682 seconds.
+    0.0625
+
+   512
+
+--------------------------------------------
+--------------------------------------------
+
+sparsity =
+
+    0.0100
+
+generating done
+direct mult
+Elapsed time is 14.456609 seconds.
+-----------------------
+
+AB_norm =
+
+   2.6732e+06
+
+
+C_norm =
+
+   2.0885e+04
+
+--------- following methods -----------
+Elapsed time is 9858.177998 seconds.
+   3.6892e+05
+
+Elapsed time is 15.754391 seconds.
+   22.9721
+
+Elapsed time is 7.104358 seconds.
+    0.0442
+
+Elapsed time is 8.355717 seconds.
+    0.0442
+
+--------- following methods -----------
+Elapsed time is 10490.915991 seconds.
+   3.7538e+05
+
+Elapsed time is 15.529767 seconds.
+   22.9850
+
+Elapsed time is 6.670473 seconds.
+    0.0442
+
+Elapsed time is 6.642496 seconds.
+    0.0442
+
+--------- following methods -----------
+Elapsed time is 11720.596923 seconds.
+   3.7936e+05
+
+Elapsed time is 15.631774 seconds.
+   22.9905
+
+Elapsed time is 6.830665 seconds.
+    0.0442
+
+Elapsed time is 7.264974 seconds.
+    0.0442
+
+
+sparsity =
+
+   1.0000e-03
+
+generating done
+direct mult
+Elapsed time is 0.219295 seconds.
+-----------------------
+
+AB_norm =
+
+   2.6827e+05
+
+
+C_norm =
+
+   2.0953e+03
+
+--------- following methods -----------
+Elapsed time is 1151.378950 seconds.
+   3.7283e+05
+
+Elapsed time is 3.221369 seconds.
+   22.9839
+
+Elapsed time is 1.571324 seconds.
+    0.0442
+
+Elapsed time is 1.835354 seconds.
+    0.0442
+
+--------- following methods -----------
+Elapsed time is 1008.875603 seconds.
+   3.7078e+05
+
+Elapsed time is 3.223461 seconds.
+   22.9736
+
+Elapsed time is 1.530518 seconds.
+    0.0442
+
+Elapsed time is 1.725170 seconds.
+    0.0442
+
+--------- following methods -----------
+Elapsed time is 1086.561460 seconds.
+   3.7566e+05
+
+Elapsed time is 3.139370 seconds.
+   22.9893
+
+Elapsed time is 1.626923 seconds.
+    0.0442
+
+Elapsed time is 1.711963 seconds.
+    0.0442
+
+
+sparsity =
+
+   1.0000e-04
+
+generating done
+direct mult
+Elapsed time is 0.001721 seconds.
+-----------------------
+
+AB_norm =
+
+   2.6954e+04
+
+
+C_norm =
+
+  208.8625
+
+--------- following methods -----------
+Elapsed time is 353.408964 seconds.
+   3.7151e+05
+
+Elapsed time is 2.621111 seconds.
+   22.9534
+
+Elapsed time is 1.409924 seconds.
+    0.0442
+
+Elapsed time is 1.480879 seconds.
+    0.0442
+
+--------- following methods -----------
+Elapsed time is 343.181000 seconds.
+   3.6637e+05
+
+Elapsed time is 2.549724 seconds.
+   22.9791
+
+Elapsed time is 1.413610 seconds.
+    0.0442
+
+Elapsed time is 1.622493 seconds.
+    0.0442
+
+--------- following methods -----------
+Elapsed time is 360.113773 seconds.
+   3.7225e+05
+
+Elapsed time is 2.530876 seconds.
+   22.9597
+
+Elapsed time is 1.405200 seconds.
+    0.0442
+
+Elapsed time is 1.443971 seconds.
+    0.0442
+
+        1024
+
+--------------------------------------------
+--------------------------------------------
+
+sparsity =
+
+    0.0100
+
+generating done
+direct mult
+Elapsed time is 16.306852 seconds.
+-----------------------
+
+AB_norm =
+
+   2.6719e+06
+
+
+C_norm =
+
+   2.0873e+04
+
+--------- following methods -----------
+Elapsed time is 10748.413756 seconds.
+   5.1322e+05
+
+Elapsed time is 33.359881 seconds.
+   32.9771
+
+Elapsed time is 17.055279 seconds.
+    0.0313
+
+Elapsed time is 17.200044 seconds.
+    0.0313
+
+--------- following methods -----------
+Elapsed time is 11327.172352 seconds.
+   5.3643e+05
+
+Elapsed time is 32.144902 seconds.
+   32.9689
+
+Elapsed time is 17.726342 seconds.
+    0.0313
+
+Elapsed time is 16.865536 seconds.
+    0.0312
+
+--------- following methods -----------
+Elapsed time is 11667.113287 seconds.
+   5.3412e+05
+
+Elapsed time is 35.219926 seconds.
+   32.9866
+
+Elapsed time is 17.176616 seconds.
+    0.0312
+
+Elapsed time is 16.562117 seconds.
+    0.0313
+
+
+sparsity =
+
+   1.0000e-03
+
+generating done
+direct mult
+Elapsed time is 0.247838 seconds.
+-----------------------
+
+AB_norm =
+
+   2.6803e+05
+
+
+C_norm =
+
+   2.0940e+03
+
+--------- following methods -----------
+Elapsed time is 1294.568386 seconds.
+   5.1673e+05
+
+Elapsed time is 6.632356 seconds.
+   32.9908
+
+Elapsed time is 3.348512 seconds.
+    0.0312
+
+Elapsed time is 3.766968 seconds.
+    0.0313
+
+--------- following methods -----------
+Elapsed time is 1128.105175 seconds.
+   5.2602e+05
+
+Elapsed time is 7.415193 seconds.
+   32.9777
+
+Elapsed time is 3.336474 seconds.
+    0.0313
+
+Elapsed time is 3.726674 seconds.
+    0.0313
+
+--------- following methods -----------
+Elapsed time is 1056.042240 seconds.
+   5.1749e+05
+
+Elapsed time is 5.738030 seconds.
+   32.9879
+
+Elapsed time is 3.682993 seconds.
+    0.0313
+
+Elapsed time is 3.105102 seconds.
+    0.0313
+
+
+sparsity =
+
+   1.0000e-04
+
+generating done
+direct mult
+Elapsed time is 0.002139 seconds.
+-----------------------
+
+AB_norm =
+
+   2.7036e+04
+
+
+C_norm =
+
+  211.6440
+
+--------- following methods -----------
+Elapsed time is 383.271998 seconds.
+   5.2122e+05
+
+Elapsed time is 4.711753 seconds.
+   32.9791
+
+Elapsed time is 2.613689 seconds.
+    0.0313
+
+Elapsed time is 2.546769 seconds.
+    0.0313
+
+--------- following methods -----------
+Elapsed time is 375.003803 seconds.
+   5.2230e+05
+
+Elapsed time is 4.705486 seconds.
+   32.9827
+
+Elapsed time is 2.636139 seconds.
+    0.0312
+
+Elapsed time is 2.574073 seconds.
+    0.0313
+
+--------- following methods -----------
+Elapsed time is 389.246583 seconds.
+   5.2586e+05
+
+Elapsed time is 4.719686 seconds.
+   32.9965
+
+Elapsed time is 2.556408 seconds.
+    0.0313
+
+Elapsed time is 2.603423 seconds.
+    0.0313
+
+>> 

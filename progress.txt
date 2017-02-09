@@ -27,3 +27,9 @@ linear equation tested and done:
   speed and accuracy ok
   therotically has problem, why n^2
   prove to be wrong
+
+
+---------------
+matrix dim = 2^14
+sample dim = 5:10
+
