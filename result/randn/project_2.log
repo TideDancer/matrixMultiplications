@@ -1,0 +1,249 @@
+MATLAB is selecting SOFTWARE OPENGL rendering.
+
+                            < M A T L A B (R) >
+                  Copyright 1984-2015 The MathWorks, Inc.
+                   R2015a (8.5.0.197613) 64-bit (glnxa64)
+                             February 12, 2015
+
+ 
+To get started, type one of these: helpwin, helpdesk, or demo.
+For product information, visit www.mathworks.com.
+ 
+
+	Academic License
+
+>> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >> >>     32
+
+--------------------------------------------
+--------------------------------------------
+generating done
+direct mult
+Elapsed time is 168.585087 seconds.
+-----------------------
+
+AB_norm =
+
+   1.0737e+09
+
+
+C_norm =
+
+   5.9314e+06
+
+--------- following methods -----------
+Elapsed time is 1.530096 seconds.
+    0.1769
+
+Elapsed time is 1.477135 seconds.
+    0.1767
+
+--------- following methods -----------
+Elapsed time is 1.546958 seconds.
+    0.1766
+
+Elapsed time is 1.516070 seconds.
+    0.1764
+
+--------- following methods -----------
+Elapsed time is 1.525968 seconds.
+    0.1768
+
+Elapsed time is 1.529709 seconds.
+    0.1762
+
+    64
+
+--------------------------------------------
+--------------------------------------------
+generating done
+direct mult
+Elapsed time is 155.781813 seconds.
+-----------------------
+
+AB_norm =
+
+   1.0738e+09
+
+
+C_norm =
+
+   5.9318e+06
+
+--------- following methods -----------
+Elapsed time is 1.969405 seconds.
+    0.1250
+
+Elapsed time is 2.013619 seconds.
+    0.1250
+
+--------- following methods -----------
+Elapsed time is 2.032367 seconds.
+    0.1251
+
+Elapsed time is 1.989459 seconds.
+    0.1248
+
+--------- following methods -----------
+Elapsed time is 1.960042 seconds.
+    0.1250
+
+Elapsed time is 2.036388 seconds.
+    0.1248
+
+   128
+
+--------------------------------------------
+--------------------------------------------
+generating done
+direct mult
+Elapsed time is 172.866193 seconds.
+-----------------------
+
+AB_norm =
+
+   1.0737e+09
+
+
+C_norm =
+
+   5.9316e+06
+
+--------- following methods -----------
+Elapsed time is 3.003610 seconds.
+    0.0884
+
+Elapsed time is 2.829663 seconds.
+    0.0883
+
+--------- following methods -----------
+Elapsed time is 3.036850 seconds.
+    0.0884
+
+Elapsed time is 2.901092 seconds.
+    0.0884
+
+--------- following methods -----------
+Elapsed time is 3.103817 seconds.
+    0.0884
+
+Elapsed time is 3.030075 seconds.
+    0.0884
+
+   256
+
+--------------------------------------------
+--------------------------------------------
+generating done
+direct mult
+Elapsed time is 175.649734 seconds.
+-----------------------
+
+AB_norm =
+
+   1.0737e+09
+
+
+C_norm =
+
+   5.9316e+06
+
+--------- following methods -----------
+Elapsed time is 5.470627 seconds.
+    0.0624
+
+Elapsed time is 5.194128 seconds.
+    0.0625
+
+--------- following methods -----------
+Elapsed time is 5.168613 seconds.
+    0.0625
+
+Elapsed time is 5.437323 seconds.
+    0.0625
+
+--------- following methods -----------
+Elapsed time is 5.077417 seconds.
+    0.0625
+
+Elapsed time is 5.448820 seconds.
+    0.0625
+
+   512
+
+--------------------------------------------
+--------------------------------------------
+generating done
+direct mult
+Elapsed time is 167.322663 seconds.
+-----------------------
+
+AB_norm =
+
+   1.0737e+09
+
+
+C_norm =
+
+   5.9315e+06
+
+--------- following methods -----------
+Elapsed time is 8.947751 seconds.
+    0.0442
+
+Elapsed time is 9.418418 seconds.
+    0.0442
+
+--------- following methods -----------
+Elapsed time is 9.057878 seconds.
+    0.0442
+
+Elapsed time is 9.362039 seconds.
+    0.0442
+
+--------- following methods -----------
+Elapsed time is 9.448657 seconds.
+    0.0442
+
+Elapsed time is 10.047741 seconds.
+    0.0442
+
+        1024
+
+--------------------------------------------
+--------------------------------------------
+generating done
+direct mult
+Elapsed time is 168.570159 seconds.
+-----------------------
+
+AB_norm =
+
+   1.0738e+09
+
+
+C_norm =
+
+   5.9319e+06
+
+--------- following methods -----------
+Elapsed time is 17.971262 seconds.
+    0.0313
+
+Elapsed time is 17.836803 seconds.
+    0.0313
+
+--------- following methods -----------
+Elapsed time is 18.552746 seconds.
+    0.0312
+
+Elapsed time is 17.800035 seconds.
+    0.0313
+
+--------- following methods -----------
+Elapsed time is 18.815815 seconds.
+    0.0313
+
+Elapsed time is 19.019866 seconds.
+    0.0313
+
+>> 

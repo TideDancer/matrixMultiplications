@@ -7,8 +7,8 @@ const = 1;
 matrix = 'high condition';
 cond_num = 10^5;
 
-r = 2^14;
-c = 2^14;
+r = 2^15;
+c = 2^15;
 
 % % build coherent matrix
 % Z = zeros(dim); I = eye(dim); O = ones(dim).*1e-8; 
@@ -42,13 +42,15 @@ sampleSize = 2^sampleDim;
 disp(sampleSize);
 disp('--------------------------------------------');
 disp('--------------------------------------------');
-for k = 2:4
+%for k = 2:4
   % ------- randn matrix ------
   clear A;
   clear B;
-  sparsity = 10^(-k)
-  A = sprandn(r,c,sparsity);
-  B = sprandn(r,c,sparsity);
+  % sparsity = 10^(-k)
+  % A = sprandn(r,c,sparsity);
+  % B = sprandn(r,c,sparsity);
+  A = randn(r,c);
+  B = randn(r,c);
 
   disp('generating done');
   disp('direct mult');
@@ -93,5 +95,5 @@ for k = 2:4
     error_norm = norm(error, 'fro');
     disp(error_norm/AB_norm);
   end
-end
+%end
 end
